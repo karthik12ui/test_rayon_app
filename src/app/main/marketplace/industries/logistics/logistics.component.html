@@ -1,0 +1,59 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-banner-content-list [attr.id]="pageContent.logisticsIntro1.id"
+ [sectionTitle] = "pageContent.logisticsIntro1.sectionTitle" 
+ [subTitle] = "pageContent.logisticsIntro1.subTitle" 
+ [content] = "pageContent.logisticsIntro1.content"
+ [bgStylePatten] = "pageContent.logisticsIntro1.bgStylePatten"
+ [imageUrl] = "pageContent.logisticsIntro1.imageUrl"
+ [imagePostion] = "pageContent.logisticsIntro1.imagePostion"
+ [bgColor] = "pageContent.logisticsIntro1.bgColor"
+ [textColor] = "pageContent.logisticsIntro1.textColor"
+ [gridStrokeColor]= "pageContent.logisticsIntro1.gridStrokeColor"
+ [lineStrokeColor]= "pageContent.logisticsIntro1.lineStrokeColor"
+ [bannerBG] = "pageContent.logisticsIntro1.bannerBG">
+ </app-banner-content-list>
+ 
+ <app-number-text [attr.id]="pageContent.logisticsIntro2.id"
+ [bgStylePatten] = "pageContent.logisticsIntro2.bgStylePatten"
+ [content] = "pageContent.logisticsIntro2.content"
+ [sectionTitle]= "pageContent.logisticsIntro2.sectionTitle"
+ [bgColor] = "pageContent.logisticsIntro2.bgColor"
+ [textColor] = "pageContent.logisticsIntro2.textColor">
+ </app-number-text>
+
+ <app-card-text [attr.id]="pageContent.logisticsIntro3.id"
+[bgStylePatten] = "pageContent.logisticsIntro3.bgStylePatten"
+[content] = "pageContent.logisticsIntro3.content"
+[sectionTitle]= "pageContent.logisticsIntro3.sectionTitle"
+[bgColor] = "pageContent.logisticsIntro3.bgColor"
+[textColor] = "pageContent.logisticsIntro3.textColor">
+</app-card-text>
+ <app-card-icon-list [attr.id]="pageContent.logisticsIntro4.id"
+ [bgStylePatten] = "pageContent.logisticsIntro4.bgStylePatten"
+ [content] = "pageContent.logisticsIntro4.content"
+ [sectionTitle]= "pageContent.logisticsIntro4.sectionTitle"
+ [subtitle]= "pageContent.logisticsIntro4.subtitle"
+ [bgColor] = "pageContent.logisticsIntro4.bgColor"
+ [textColor] = "pageContent.logisticsIntro4.textColor">
+ </app-card-icon-list>

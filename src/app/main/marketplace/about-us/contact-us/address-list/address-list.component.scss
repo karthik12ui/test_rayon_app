@@ -1,0 +1,13 @@
+.mat-card-image{
+    position: relative;
+    min-height: 180px;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: 400px !important;
+        object-fit: contain;
+    } 
+}

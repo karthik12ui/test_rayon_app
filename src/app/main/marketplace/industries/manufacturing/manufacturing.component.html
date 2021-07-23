@@ -1,0 +1,56 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display" class="mt-2">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+
+ <app-banner-content-list [attr.id]="pageContent.manufacturingIntro1.id"
+[sectionTitle] = "pageContent.manufacturingIntro1.sectionTitle" 
+[subTitle] = "pageContent.manufacturingIntro1.subTitle" 
+[content] = "pageContent.manufacturingIntro1.content"
+[bgStylePatten] = "pageContent.manufacturingIntro1.bgStylePatten"
+[imageUrl] = "pageContent.manufacturingIntro1.imageUrl"
+[imagePostion] = "pageContent.manufacturingIntro1.imagePostion"
+[bgColor] = "pageContent.manufacturingIntro1.bgColor"
+[textColor] = "pageContent.manufacturingIntro1.textColor"
+[gridStrokeColor]= "pageContent.manufacturingIntro1.gridStrokeColor"
+[lineStrokeColor]= "pageContent.manufacturingIntro1.lineStrokeColor"
+[bannerBG] = "pageContent.manufacturingIntro1.bannerBG">
+</app-banner-content-list>
+<app-number-text [attr.id]="pageContent.manufacturingIntro2.id"
+[bgStylePatten] = "pageContent.manufacturingIntro2.bgStylePatten"
+[content] = "pageContent.manufacturingIntro2.content"
+[sectionTitle]= "pageContent.manufacturingIntro2.sectionTitle"
+[bgColor] = "pageContent.manufacturingIntro2.bgColor"
+[textColor] = "pageContent.manufacturingIntro2.textColor">
+</app-number-text>
+<app-banner-content-list [attr.id]="pageContent.manufacturingIntro3.id"
+[sectionTitle] = "pageContent.manufacturingIntro3.sectionTitle" 
+[subTitle] = "pageContent.manufacturingIntro3.subTitle" 
+[content] = "pageContent.manufacturingIntro3.content"
+[bgStylePatten] = "pageContent.manufacturingIntro3.bgStylePatten"
+[imageUrl] = "pageContent.manufacturingIntro3.imageUrl"
+[imagePostion] = "pageContent.manufacturingIntro3.imagePostion"
+[bgColor] = "pageContent.manufacturingIntro3.bgColor"
+[textColor] = "pageContent.manufacturingIntro3.textColor"
+[gridStrokeColor]= "pageContent.manufacturingIntro3.gridStrokeColor"
+[lineStrokeColor]= "pageContent.manufacturingIntro3.lineStrokeColor"
+[bannerBG] = "pageContent.manufacturingIntro3.bannerBG">
+</app-banner-content-list>

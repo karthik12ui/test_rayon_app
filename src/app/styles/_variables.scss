@@ -1,0 +1,22 @@
+$theme-max-width: 1300px;
+$top-toolbar-height: 30px;
+$main-toolbar-height: 72px;
+$user-menu-width: 220px;
+$header-image-min-height: 600px;
+$header-carousel-height: 700px;
+$main-content-header-offset-to-top: 100px;
+
+$main-sidenav-width: 250px;
+$search-sidenav-width: 288px;
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config(
+  $font-family: 'rayon-tx-regular'
+);
+$rayon_bold:  'rayon-bold';
+$rayon_regular:  'rayon-regular';
+$rayon_tx_regular:  'rayon-tx-regular';
+$rayon_tx_bold:  'rayon-tx-bold';
+ @include angular-material-typography($custom-typography);
+
+ $font-family: 'rayon-tx-regular', helvetica, arial,sans-serif !important;
+$theme-max-width: 1300px;

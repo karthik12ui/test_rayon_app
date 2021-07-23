@@ -1,0 +1,22 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div class="mt-2" *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>

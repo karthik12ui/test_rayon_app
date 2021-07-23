@@ -1,0 +1,39 @@
+<div class="{{bgColor}} {{textColor}} {{bgStylePatten}}">
+  <div class="px-3">
+      <div class="theme-container">
+        <div fxLayout="row wrap" class="fixed-section-title py-2">
+          <span fxFlex="100">
+            <h1  class="rayon-bold">{{sectionTitle}}</h1>  
+          </span>
+            <p fxFlex="100" class="font_16 pt-1">{{subtitle}}</p>  
+        </div>
+
+          <div fxLayout="row wrap" class="py-2">
+            <div fxFlex="100" fxFlex.gt-md="25" fxFlex.gt-sm="50" class="p-2 mat-card-border"  *ngFor="let item of content">
+              <div class=""  fxLayoutAlign="center center">
+                <img [src]="item.imageUrl" class="mw-100 d-block"> 
+              </div>            
+              <div class=""  fxLayoutAlign="center center" fxLayout="row wrap" class="py-2">
+                <h1 fxFlex="100" class="mt-5 rayon-bold">{{item.title}}</h1>
+                </div>
+                <div fxLayoutAlign="start start" fxLayout="row wrap">
+                  <p class="font_16">{{item.text}}</p>    
+                </div>
+          </div>
+           
+          </div>
+         
+              
+      </div>
+  </div>   
+  <div fxHide fxShow.gt-sm>
+    <app-svg-line-style 
+    [lineStrokeColor] ="lineStrokeColor"
+    [pathPosition] = "'right'"></app-svg-line-style> 
+    <app-svg-grid-style 
+    [gridStrokeColor] = "gridStrokeColor"
+    [pathPosition] = "'right'"
+    ></app-svg-grid-style>
+  </div>
+
+</div>

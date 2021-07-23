@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'rayon-bold';
+    src:url('./assets/fonts/rayonNHGDS-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'rayon-regular';
+    src:url('./assets/fonts/rayonNHGDS-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'rayon-tx-regular';
+    src:url('./assets/fonts/rayonNHGTX-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'rayon-tx-bold';
+    src:url('./assets/fonts/rayonNHGTX-Bold.ttf') format('truetype');
+}
+@import '~material-design-icons/iconfont/material-icons.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~swiper/swiper.scss';
+@import "./app/styles/_theme.scss";
+@import "./app/styles/_base.scss";
+@import "./app/styles/_rtl.scss";
+@import "./app/styles/_spaces.scss";

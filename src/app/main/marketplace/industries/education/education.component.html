@@ -1,0 +1,53 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-banner-content-list [attr.id]="pageContent.educationIntro1.id"
+ [sectionTitle] = "pageContent.educationIntro1.sectionTitle" 
+ [subTitle] = "pageContent.educationIntro1.subTitle" 
+ [content] = "pageContent.educationIntro1.content"
+ [bgStylePatten] = "pageContent.educationIntro1.bgStylePatten"
+ [imageUrl] = "pageContent.educationIntro1.imageUrl"
+ [imagePostion] = "pageContent.educationIntro1.imagePostion"
+ [bgColor] = "pageContent.educationIntro1.bgColor"
+ [textColor] = "pageContent.educationIntro1.textColor"
+ [gridStrokeColor]= "pageContent.educationIntro1.gridStrokeColor"
+ [lineStrokeColor]= "pageContent.educationIntro1.lineStrokeColor"
+ [bannerBG] = "pageContent.educationIntro1.bannerBG">
+ 
+ </app-banner-content-list>
+ <app-number-text [attr.id]="pageContent.educationIntro2.id"
+[bgStylePatten] = "pageContent.educationIntro2.bgStylePatten"
+[content] = "pageContent.educationIntro2.content"
+[sectionTitle]= "pageContent.educationIntro2.sectionTitle"
+[bgColor] = "pageContent.educationIntro2.bgColor"
+[textColor] = "pageContent.educationIntro2.textColor">
+
+</app-number-text>
+<app-image-with-list [attr.id]="pageContent.educationIntro3.id"
+ [bgStylePatten]= "pageContent.educationIntro3.bgStylePatten"
+[content]= "pageContent.educationIntro3.content"
+[sectionTitle]= "pageContent.educationIntro3.sectionTitle"
+[subtitle]= "pageContent.educationIntro3.subtitle"
+[bgColor]= "pageContent.educationIntro3.bgColor"
+[textColor]= "pageContent.educationIntro3.textColor">
+
+</app-image-with-list>

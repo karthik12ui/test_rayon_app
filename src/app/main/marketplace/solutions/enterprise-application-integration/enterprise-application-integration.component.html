@@ -1,0 +1,57 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div class="mt-2" *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+
+ <app-content-image-text [attr.id]="pageContent.entyerpriseAIIntro1.id"
+ [sectionTitle] = "pageContent.entyerpriseAIIntro1.sectionTitle" 
+ [content] = "pageContent.entyerpriseAIIntro1.content"
+ [content2] = "pageContent.entyerpriseAIIntro1.content2"
+ [bgStylePatten] = "pageContent.entyerpriseAIIntro1.bgStylePatten"
+ [imageContent] = "pageContent.entyerpriseAIIntro1.imageContent"
+ [imagePostion] = "pageContent.entyerpriseAIIntro1.imagePostion"
+ [bgColor] = "pageContent.entyerpriseAIIntro1.bgColor"
+ [textColor] = "pageContent.entyerpriseAIIntro1.textColor">
+ </app-content-image-text>
+ <app-icon-text
+[attr.id]="pageContent.entyerpriseAIIntro3.id"
+[bgStylePatten] = "pageContent.entyerpriseAIIntro3.bgStylePatten"
+[content] = "pageContent.entyerpriseAIIntro3.content"
+[sectionTitle]= "pageContent.entyerpriseAIIntro3.sectionTitle"
+[subtitle]= "pageContent.entyerpriseAIIntro3.subtitle"
+[bgColor] = "pageContent.entyerpriseAIIntro3.bgColor"
+[textColor] = "pageContent.entyerpriseAIIntro3.textColor">
+</app-icon-text>
+<app-number-text [attr.id]="pageContent.entyerpriseAIIntro2.id"
+[bgStylePatten] = "pageContent.entyerpriseAIIntro2.bgStylePatten"
+[content] = "pageContent.entyerpriseAIIntro2.content"
+[sectionTitle]= "pageContent.entyerpriseAIIntro2.sectionTitle"
+[bgColor] = "pageContent.entyerpriseAIIntro2.bgColor"
+[textColor] = "pageContent.entyerpriseAIIntro2.textColor">
+</app-number-text>
+<app-image-with-list [attr.id]="pageContent.entyerpriseAIIntro4.id"
+[bgStylePatten] = "pageContent.entyerpriseAIIntro4.bgStylePatten"
+[content] = "pageContent.entyerpriseAIIntro4.content"
+[sectionTitle]= "pageContent.entyerpriseAIIntro4.sectionTitle"
+[subtitle]= "pageContent.entyerpriseAIIntro4.subtitle"
+[bgColor] = "pageContent.entyerpriseAIIntro4.bgColor"
+[textColor] = "pageContent.entyerpriseAIIntro4.textColor">
+</app-image-with-list>

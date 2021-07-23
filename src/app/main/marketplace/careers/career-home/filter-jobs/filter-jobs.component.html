@@ -1,0 +1,10 @@
+<mat-card fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center" class="w-100 p-2 filter-row">
+  <div class="">
+    <span class="rayon-bold font_16 pr-2">Filter Results ({{totalResults}})</span>
+    <span *ngFor="let item of filterList">
+      <app-filter-list [filterList] = "item" (onSelectionFilter) = "updatedSelection($event)">
+      </app-filter-list>
+    </span>
+    <!-- <span class="rayon-bold font_16 text-muted " fxLayoutAlign="end end" >Reset Filter</span> -->
+ </div>
+</mat-card>

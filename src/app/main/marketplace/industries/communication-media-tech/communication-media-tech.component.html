@@ -1,0 +1,50 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-left-content-image [attr.id]="pageContent.communicationIntro1.id"
+ [sectionTitle] = "pageContent.communicationIntro1.sectionTitle" 
+ [subtitle]= "pageContent.communicationIntro1.subTitle"
+ [content] = "pageContent.communicationIntro1.content"
+ [bgStylePatten] = "pageContent.communicationIntro1.bgStylePatten"
+ [imageUrl] = "pageContent.communicationIntro1.imageUrl"
+ [imagePostion] = "pageContent.communicationIntro1.imagePostion"
+ [bgColor] = "pageContent.communicationIntro1.bgColor"
+ [textColor] = "pageContent.communicationIntro1.textColor">
+</app-left-content-image>
+<app-image-with-list [attr.id]="pageContent.communicationIntro2.id"
+[bgStylePatten] = "pageContent.communicationIntro2.bgStylePatten"
+[content] = "pageContent.communicationIntro2.content"
+[sectionTitle]= "pageContent.communicationIntro2.sectionTitle"
+[subtitle]= "pageContent.communicationIntro2.subtitle"
+[bgColor] = "pageContent.communicationIntro2.bgColor"
+[textColor] = "pageContent.communicationIntro2.textColor">
+</app-image-with-list>
+<app-fixed-content [attr.id]="pageContent.communicationIntro3.id"
+[bgStylePatten] = "pageContent.communicationIntro3.bgStylePatten"
+[content] = "pageContent.communicationIntro3.content"
+[sectionTitle]= "pageContent.communicationIntro3.sectionTitle"
+[subtitle]= "pageContent.communicationIntro3.subtitle"
+[imageUrl] = "pageContent.communicationIntro3.imageUrl"
+[imagePostion] = "pageContent.communicationIntro3.imagePostion"
+[bgColor] = "pageContent.communicationIntro3.bgColor"
+[textColor] = "pageContent.communicationIntro3.textColor">
+</app-fixed-content>

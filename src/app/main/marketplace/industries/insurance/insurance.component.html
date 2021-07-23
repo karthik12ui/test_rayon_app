@@ -1,0 +1,57 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display" class="mt-2">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-number-text [attr.id]="pageContent.insuranceIntro1.id"
+ [bgStylePatten] = "pageContent.insuranceIntro1.bgStylePatten"
+ [content] = "pageContent.insuranceIntro1.content"
+ [sectionTitle]= "pageContent.insuranceIntro1.sectionTitle"
+ [bgColor] = "pageContent.insuranceIntro1.bgColor"
+ [textColor] = "pageContent.insuranceIntro1.textColor">
+ </app-number-text>
+ <app-content-image-text [attr.id]="pageContent.insuranceIntro2.id"
+ [sectionTitle] = "pageContent.insuranceIntro2.sectionTitle" 
+ [content] = "pageContent.insuranceIntro2.content"
+ [content2] = "pageContent.insuranceIntro2.content2"
+ [bgStylePatten] = "pageContent.insuranceIntro2.bgStylePatten"
+ [imageContent] = "pageContent.insuranceIntro2.imageContent"
+ [imagePostion] = "pageContent.insuranceIntro2.imagePostion"
+ [bgColor] = "pageContent.insuranceIntro2.bgColor"
+ [textColor] = "pageContent.insuranceIntro2.textColor">
+ </app-content-image-text>
+ <app-number-text [attr.id]="pageContent.insuranceIntro3.id"
+ [bgStylePatten] = "pageContent.insuranceIntro3.bgStylePatten"
+ [content] = "pageContent.insuranceIntro3.content"
+ [sectionTitle]= "pageContent.insuranceIntro3.sectionTitle"
+ [bgColor] = "pageContent.insuranceIntro3.bgColor"
+ [textColor] = "pageContent.insuranceIntro3.textColor">
+ 
+ </app-number-text>
+ <app-fixed-content [attr.id]="pageContent.insuranceIntro4.id"
+[bgStylePatten] = "pageContent.insuranceIntro4.bgStylePatten"
+[content] = "pageContent.insuranceIntro4.content"
+[sectionTitle]= "pageContent.insuranceIntro4.sectionTitle"
+[subtitle]= "pageContent.insuranceIntro4.subtitle"
+[imageUrl] = "pageContent.insuranceIntro4.imageUrl"
+[imagePostion] = "pageContent.insuranceIntro4.imagePostion"
+[bgColor] = "pageContent.insuranceIntro4.bgColor"
+[textColor] = "pageContent.insuranceIntro4.textColor">
+</app-fixed-content>

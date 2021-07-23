@@ -1,0 +1,63 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display">
+
+   <app-marketplace-tabs
+         (scrollToEvent)= "scrollToView($event)"
+         [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+         [pageParentId]="pageContent.pageBanner.pageParentId"
+         [pageId] = "pageContent.pageBanner.pageId"
+         [pageNavItems]= "pageContent.pageNavItems.list">
+   </app-marketplace-tabs>
+</div>
+<app-image-content [attr.id]="pageContent.rayonStategy.id"
+   [sectionTitle] = "pageContent.rayonStategy.sectionTitle" 
+   [content] = "pageContent.rayonStategy.content"
+   [bgStylePatten] = "pageContent.rayonStategy.bgStylePatten"
+   [imageUrl] = "pageContent.rayonStategy.imageUrl"
+   [imagePostion] = "pageContent.rayonStategy.imagePostion"
+   [bgColor] = "pageContent.rayonStategy.bgColor"
+   [textColor] = "pageContent.rayonStategy.textColor">
+</app-image-content>
+<app-swiper-image-content 
+[attr.id]="pageContent.rayonsoftServices.id"
+[bgStylePatten] = "pageContent.rayonsoftServices.bgStylePatten"
+[content] = "pageContent.rayonsoftServices.content"
+[sectionTitle]= "pageContent.rayonsoftServices.sectionTitle"
+[imageUrl] = "pageContent.rayonsoftServices.imageUrl"
+[imagePostion] = "pageContent.rayonsoftServices.imagePostion"
+[bgColor] = "pageContent.rayonsoftServices.bgColor"
+[textColor] = "pageContent.rayonsoftServices.textColor">
+</app-swiper-image-content>
+<app-fixed-content [attr.id]="pageContent.howRayonsoftDo.id"
+[bgStylePatten] = "pageContent.howRayonsoftDo.bgStylePatten"
+[content] = "pageContent.howRayonsoftDo.content"
+[sectionTitle]= "pageContent.howRayonsoftDo.sectionTitle"
+[subtitle]= "pageContent.howRayonsoftDo.subtitle"
+[imageUrl] = "pageContent.howRayonsoftDo.imageUrl"
+[imagePostion] = "pageContent.howRayonsoftDo.imagePostion"
+[bgColor] = "pageContent.howRayonsoftDo.bgColor"
+[textColor] = "pageContent.howRayonsoftDo.textColor">
+</app-fixed-content>
+
+<app-image-with-list [attr.id]="pageContent.whyRayonsoft.id"
+[bgStylePatten] = "pageContent.whyRayonsoft.bgStylePatten"
+[content] = "pageContent.whyRayonsoft.content"
+[sectionTitle]= "pageContent.whyRayonsoft.sectionTitle"
+[subtitle]= "pageContent.whyRayonsoft.subtitle"
+[bgColor] = "pageContent.whyRayonsoft.bgColor"
+[textColor] = "pageContent.whyRayonsoft.textColor">
+</app-image-with-list>
+
+<app-join-our [attr.id]="pageContent.joinUs.id" 
+[bgStylePatten] = "pageContent.joinUs.bgStylePatten"></app-join-our>

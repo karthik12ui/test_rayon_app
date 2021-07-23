@@ -1,0 +1,76 @@
+<span *ngFor="let item of alerts">
+  <app-notification-alerts *ngIf="displayNotificationAlert"
+  [NotifyParam]='item.NotifyParam'
+  [NotifyBackgroundColor]='item.NotifyBackgroundColor'
+  [NotifyType]='item.NotifyType'
+  [Message]='item.Message'
+  [Id]='item.Id'
+  [Url]='item.Url'
+  (AlertCloseSelected)='alertClose($event)'>
+  </app-notification-alerts>
+</span>
+<div class="p-3">
+  <div class="theme-container">
+
+    <div fxLayout="row" fxLayoutAlign="center center" class="my-3">
+        <mat-card [style.max-width.px]="500">
+          <div fxLayout="column" fxLayoutAlign="center center" class="text-center">  
+            <h1 class="uppercase">Sign In</h1>  
+          </div>
+          <form [formGroup]="loginForm">
+                  <mat-form-field appearance="outline" class="w-100 mt-1"
+                  [ngClass]="{'error-input': ((loginForm.get('userName').invalid) && ((loginForm.get('userName').dirty) || (loginForm.get('userName').touched)))}">
+                  <mat-icon matPrefix class="mr-1 text-muted">person</mat-icon>
+                  <mat-label>Username</mat-label>
+                  <input matInput
+                  placeholder="Username"
+                  formControlName="userName"
+                  [(ngModel)]="loginDetailsModel.userName"
+                  required>
+              </mat-form-field>
+              <ng-container *ngFor="let validation of loginValidationMessages.userName"  class="w-100 mt-1">
+                <mat-error *ngIf="loginForm.get('userName').hasError(validation.type) && ((loginForm.get('userName').dirty) || (loginForm.get('userName').touched)) ">
+                  <mat-icon matPrefix class="mr-1">error</mat-icon> 
+                  <span class="input-error-txt">{{validation.message}}</span> 
+                </mat-error>
+              </ng-container>
+              <mat-form-field appearance="outline"  class="w-100 mt-1"
+              [ngClass]="{'error-input':((loginForm.get('password').invalid) && ((loginForm.get('password').dirty) || (loginForm.get('password').touched))) }">
+                  <mat-icon matPrefix class="mr-1 text-muted">lock</mat-icon>
+                  <mat-label>Password</mat-label>
+                  <input matInput placeholder="Password"
+                   formControlName="password"
+                   [(ngModel)]="loginDetailsModel.password"
+                    required
+                     [type]="hide ? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" type="button" class="text-muted">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+              </mat-form-field> 
+              <ng-container *ngFor="let validation of loginValidationMessages.password"  class="w-100 mt-1">
+                <mat-error *ngIf="loginForm.get('password').hasError(validation.type) && ((loginForm.get('password').dirty) || (loginForm.get('password').touched)) ">
+                  <mat-icon matPrefix class="mr-1">error</mat-icon> 
+                  <span class="input-error-txt">{{validation.message}}</span> 
+                </mat-error>
+              </ng-container>
+             
+              <div class="text-center mt-2"> 
+                  <button mat-raised-button color="primary" class="uppercase" 
+                  [ngClass]= "{'disableStyle' : !loginForm.valid}"
+                  [disabled]= "!loginForm.valid"
+                  (click)="submitLoginClick()">
+                      Sign to My Account
+                  </button>
+              </div>    
+          </form>
+          <mat-card-actions fxLayoutAlign="end center">
+            <button mat-button>
+              <mat-icon class="text-muted">vpn_key</mat-icon>
+              <span class="mx-1">Reset Password</span>
+            </button> 
+          </mat-card-actions>
+        </mat-card>
+    </div> 
+
+  </div>
+</div>

@@ -1,0 +1,113 @@
+<app-page-banner 
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<div class="p-1 theme-container" fxLayout="row wrap" >
+    <div fxFlex="100" class="pr-3"  fxFlex.gt-sm="70">
+        <mat-card class="mat-elevation-z2">
+            <span *ngIf="searchDisplayFlag.searchResultsPlaceholder">
+                <app-lazy-loader
+                [loaderType] = LazyLoaderConst.ImageList 
+                [loaderLength] = LazyLoaderConst.LengthSize4
+                [loaderFormat] = LazyLoaderConst.FormatHroz>
+                </app-lazy-loader>
+            </span>
+            <span *ngIf="!searchDisplayFlag.searchResultsPlaceholder">
+                <mat-card-content class="mb-0">
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <h3 class="rayon-bold">
+                            <span class="text-bg-primary">{{jobDetails.category}} </span> 
+                            <span class="px-2 text-bg-Deep-orange">({{jobDetails.jobType}})</span>
+                        </h3>
+                        <h3 class="rayon-bold">
+                            <span>Position ID: {{jobDetails.postionID}}</span>
+                        </h3>
+                    </div> 
+                    <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+                        <div fxFlex="100" fxFlex.gt-sm="70" >
+                            <h1 class="title rayon-bold"><a>{{jobDetails.title}}</a></h1>
+                            <p fxLayout="row" class="address">
+                                <mat-icon class="text-muted">location_on</mat-icon>
+                                <span>{{jobDetails.city}}, {{jobDetails.state}}</span>
+                            </p>
+                        </div>
+                        <div fxFlex="100" fxFlex.gt-sm="30" fxLayoutAlign="end end" >
+                            <a mat-raised-button class="btn-primary"
+                            (click)="viewJobDetails()">Apply</a>
+                        </div>
+                    </div>
+                   
+                    <div>
+                        <h2 class="rayon-bold"  fxLayout="row">
+                            <span>{{pageContent.sections.title}}</span> 
+                        </h2>
+                        <p class="font_16"  fxLayout="row">
+                            {{jobDetails.jobDetails.description}}
+                        </p>
+                    </div> 
+              </mat-card-content>
+            </span>
+        </mat-card>
+        <div *ngIf="!searchDisplayFlag.searchResultsPlaceholder">
+            <mat-card class="mt-2">
+                <h2 class="rayon-bold"  fxLayout="row">
+                    <span>{{pageContent.sections.basicQualify}}</span> 
+                </h2>
+                <ul  fxLayout="row" class="list_square pl-3" *ngFor="let item of jobDetails.jobDetails.basicQualification">
+                    <li class="py-1 font_16">{{item.list}}</li>
+                </ul>
+            </mat-card>
+            <mat-card class="mt-2">
+                <h2 class="rayon-bold"  fxLayout="row">
+                    <span>{{pageContent.sections.title2}}</span> 
+                </h2>
+                <ul  fxLayout="row" class="list_square pl-3" *ngFor="let item of jobDetails.jobDetails.PreferredSkills">
+                    <li class="py-1 font_16">{{item.list}}</li>
+                </ul>
+            </mat-card>
+        </div>
+    </div>
+    <div fxFlex="100" fxFlex.gt-sm="30">
+        <div class="pb-2" *ngFor="let benifit of pageContent.benifits">
+            <app-info-content [data] = "benifit">
+            </app-info-content>
+        </div>
+    </div>
+</div>       
+<app-icon-text
+[bgStylePatten] = "pageContent.lifeAtRayon.bgStylePatten"
+[content] = "pageContent.lifeAtRayon.content"
+[sectionTitle]= "pageContent.lifeAtRayon.sectionTitle"
+[subtitle]= "pageContent.lifeAtRayon.subtitle"
+[bgColor] = "pageContent.lifeAtRayon.bgColor"
+[textColor] = "pageContent.lifeAtRayon.textColor">
+</app-icon-text>
+<div class="p-1 theme-container">
+    <mat-card class="mt-2">
+        <h2 class="rayon-bold mb-2"  fxLayout="row">
+            <span>Other Benfits with Rayonsoft</span> 
+        </h2>
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let item of pageContent.accordionData">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <h3 class="rayon-bold"  fxLayout="row">
+                        {{item.title}}
+                    </h3>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ul  fxLayout="row" class="list_square pl-3" *ngFor="let item2 of item.content">
+                <li class="py-1 font_16">{{item2.li}}</li>
+            </ul>
+            </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card>
+
+</div>

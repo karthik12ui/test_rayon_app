@@ -1,0 +1,61 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div class="mt-2" *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+
+ <app-left-content-image [attr.id]="pageContent.ebuisnessIntro1.id"
+ [sectionTitle] = "pageContent.ebuisnessIntro1.sectionTitle" 
+ [subtitle]= "pageContent.ebuisnessIntro1.subTitle"
+ [content] = "pageContent.ebuisnessIntro1.content"
+ [bgStylePatten] = "pageContent.ebuisnessIntro1.bgStylePatten"
+ [imageUrl] = "pageContent.ebuisnessIntro1.imageUrl"
+ [imagePostion] = "pageContent.ebuisnessIntro1.imagePostion"
+ [bgColor] = "pageContent.ebuisnessIntro1.bgColor"
+ [textColor] = "pageContent.ebuisnessIntro1.textColor">
+</app-left-content-image>
+<app-banner-content-list [attr.id]="pageContent.ebuisnessIntro2.id"
+[sectionTitle] = "pageContent.ebuisnessIntro2.sectionTitle" 
+[subTitle] = "pageContent.ebuisnessIntro2.subTitle" 
+[content] = "pageContent.ebuisnessIntro2.content"
+[bgStylePatten] = "pageContent.ebuisnessIntro2.bgStylePatten"
+[imageUrl] = "pageContent.ebuisnessIntro2.imageUrl"
+[imagePostion] = "pageContent.ebuisnessIntro2.imagePostion"
+[bgColor] = "pageContent.ebuisnessIntro2.bgColor"
+[textColor] = "pageContent.ebuisnessIntro2.textColor"
+[gridStrokeColor]= "pageContent.ebuisnessIntro2.gridStrokeColor"
+[lineStrokeColor]= "pageContent.ebuisnessIntro2.lineStrokeColor"
+[bannerBG] = "pageContent.ebuisnessIntro2.bannerBG">
+
+</app-banner-content-list>
+<app-number-text [attr.id]="pageContent.ebuisnessIntro3.id"
+[bgStylePatten] = "pageContent.ebuisnessIntro3.bgStylePatten"
+[content] = "pageContent.ebuisnessIntro3.content"
+[sectionTitle]= "pageContent.ebuisnessIntro3.sectionTitle"
+[bgColor] = "pageContent.ebuisnessIntro3.bgColor"
+[textColor] = "pageContent.ebuisnessIntro3.textColor">
+</app-number-text>
+<app-card-text [attr.id]="pageContent.ebuisnessIntro4.id"
+[bgStylePatten] = "pageContent.ebuisnessIntro4.bgStylePatten"
+[content] = "pageContent.ebuisnessIntro4.content"
+[sectionTitle]= "pageContent.ebuisnessIntro4.sectionTitle"
+[bgColor] = "pageContent.ebuisnessIntro4.bgColor"
+[textColor] = "pageContent.ebuisnessIntro4.textColor">
+</app-card-text>

@@ -1,0 +1,65 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div class="mt-2" *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-left-content-image [attr.id]="pageContent.entyerpriseSOAIntro2.id"
+ [sectionTitle] = "pageContent.entyerpriseSOAIntro2.sectionTitle" 
+ [subtitle]= "pageContent.entyerpriseSOAIntro2.subTitle"
+ [content] = "pageContent.entyerpriseSOAIntro2.content"
+ [bgStylePatten] = "pageContent.entyerpriseSOAIntro2.bgStylePatten"
+ [imageUrl] = "pageContent.entyerpriseSOAIntro2.imageUrl"
+ [imagePostion] = "pageContent.entyerpriseSOAIntro2.imagePostion"
+ [bgColor] = "pageContent.entyerpriseSOAIntro2.bgColor"
+ [textColor] = "pageContent.entyerpriseSOAIntro2.textColor">
+</app-left-content-image>
+ <app-banner-content-list [attr.id]="pageContent.entyerpriseSOAIntro1.id"
+ [sectionTitle] = "pageContent.entyerpriseSOAIntro1.sectionTitle" 
+ [subTitle] = "pageContent.entyerpriseSOAIntro1.subTitle" 
+ [content] = "pageContent.entyerpriseSOAIntro1.content"
+ [bgStylePatten] = "pageContent.entyerpriseSOAIntro1.bgStylePatten"
+ [imageUrl] = "pageContent.entyerpriseSOAIntro1.imageUrl"
+ [imagePostion] = "pageContent.entyerpriseSOAIntro1.imagePostion"
+ [bgColor] = "pageContent.entyerpriseSOAIntro1.bgColor"
+ [textColor] = "pageContent.entyerpriseSOAIntro1.textColor"
+ [gridStrokeColor]= "pageContent.entyerpriseSOAIntro1.gridStrokeColor"
+ [lineStrokeColor]= "pageContent.entyerpriseSOAIntro1.lineStrokeColor"
+ [bannerBG] = "pageContent.entyerpriseSOAIntro1.bannerBG">
+ 
+ </app-banner-content-list>
+
+
+<app-number-text [attr.id]="pageContent.entyerpriseSOAIntro3.id"
+[bgStylePatten] = "pageContent.entyerpriseSOAIntro3.bgStylePatten"
+[content] = "pageContent.entyerpriseSOAIntro3.content"
+[sectionTitle]= "pageContent.entyerpriseSOAIntro3.sectionTitle"
+[bgColor] = "pageContent.entyerpriseSOAIntro3.bgColor"
+[textColor] = "pageContent.entyerpriseSOAIntro3.textColor">
+</app-number-text>
+<app-fixed-content [attr.id]="pageContent.entyerpriseSOAIntro4.id"
+[bgStylePatten] = "pageContent.entyerpriseSOAIntro4.bgStylePatten"
+[content] = "pageContent.entyerpriseSOAIntro4.content"
+[sectionTitle]= "pageContent.entyerpriseSOAIntro4.sectionTitle"
+[subtitle]= "pageContent.entyerpriseSOAIntro4.subtitle"
+[imageUrl] = "pageContent.entyerpriseSOAIntro4.imageUrl"
+[imagePostion] = "pageContent.entyerpriseSOAIntro4.imagePostion"
+[bgColor] = "pageContent.entyerpriseSOAIntro4.bgColor"
+[textColor] = "pageContent.entyerpriseSOAIntro4.textColor">
+</app-fixed-content>

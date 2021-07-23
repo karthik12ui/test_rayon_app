@@ -1,0 +1,52 @@
+
+
+<mat-card class="job-item p-0" fxLayout="row wrap">  
+  
+  <div fxFlex="100" fxFlex.gt-md="30" class="pr-2">
+      <div class="mat-card-image w-100 m-0" fxHide fxShow.gt-sm>
+          <img [src]="dataList.image">
+      </div>
+  </div>
+  <div fxFlex="100" fxFlex.gt-md="70" class="p-3">
+      <div fxLayout="column" fxLayoutAlign="start stretch" class="h-100">
+          <mat-card-content class="mb-0">
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                  <h3 class="rayon-bold">
+                      <span class="text-bg-primary">{{dataList.country}}</span> 
+                  </h3>
+              </div> 
+        
+              <h1 class="title rayon-bold"><a>{{dataList.locationName}}</a></h1>
+
+              <p fxLayout="row" class="address">
+                  <mat-icon class="text-muted">location_on</mat-icon>
+                  <span>{{dataList.address.addressline1}}, </span>
+                  <span>{{dataList.address.city}}, {{dataList.address.state}}</span>
+              </p>
+
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                  <h3 class="rayon-bold text-bg-Deep-orange">
+                      <span>{{dataList.companyName}}</span>
+                  </h3>
+              </div> 
+          </mat-card-content>
+          <div class="sticky-footer-helper" fxFlex="grow"></div>
+          <mat-card-actions class="m-0 p-0"  fxLayout="column" fxLayoutAlign="center start"> 
+            <p fxLayout="row" class="date mb-0">
+              <mat-icon class="text-muted">contact_phone</mat-icon>
+              <span class="mx-2 rayon-bold">Phone  - {{dataList.contact.phone }}</span>
+          </p>
+            <p fxLayout="row" class="date mb-0" *ngIf="dataList.contact.fax !== ''">
+              <mat-icon class="text-muted">contact_mail</mat-icon>
+              <span class="mx-2 rayon-bold">Fax  - {{dataList.contact.fax }}</span>
+          </p>
+              <p fxLayout="row" class="date mb-0">
+                  <mat-icon class="text-muted">email</mat-icon>
+                  <span class="mx-2 rayon-bold">Email  - {{dataList.contact.email }}</span>
+              </p>
+          </mat-card-actions> 
+      </div>        
+      
+  </div> 
+
+</mat-card>

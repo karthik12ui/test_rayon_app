@@ -1,0 +1,31 @@
+version: 0.1
+environment_variables:
+    plaintext:
+        S3_BUCKET: "rayonsoft-dev"
+        BUILD_ENV: "prod"
+phases:
+   install:
+    commands:
+    - echo Installing source NPM dependencies...
+    - npm install -g @angular/cli
+    - rm package-lock.json
+pre_build:
+    commands:
+    - npm install
+build:
+    commands:
+    - echo build started on `date`
+    - ng build
+    - ls -l -F
+post_build:
+    commands:
+            # Clear S3 bucket.
+            - aws s3 rm s3://${S3_BUCKET} --recursive
+            - echo S3 bucket is cleared.
+            - aws s3 cp s3://${S3_BUCKET} --recursive
+            - echo Build completed on `date`
+artifacts:
+    files:
+       - '**/*'
+    base-directory: 'dist*'
+    discard-paths: yes

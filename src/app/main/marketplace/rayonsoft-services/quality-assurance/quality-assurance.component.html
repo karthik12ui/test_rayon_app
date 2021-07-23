@@ -1,0 +1,69 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display" class="mt-3">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-banner-content-list [attr.id]="pageContent.qualityIntro1.id"
+[sectionTitle] = "pageContent.qualityIntro1.sectionTitle" 
+[subTitle] = "pageContent.qualityIntro1.subTitle" 
+[content] = "pageContent.qualityIntro1.content"
+[bgStylePatten] = "pageContent.qualityIntro1.bgStylePatten"
+[imageUrl] = "pageContent.qualityIntro1.imageUrl"
+[imagePostion] = "pageContent.qualityIntro1.imagePostion"
+[bgColor] = "pageContent.qualityIntro1.bgColor"
+[textColor] = "pageContent.qualityIntro1.textColor"
+[gridStrokeColor]= "pageContent.qualityIntro1.gridStrokeColor"
+[lineStrokeColor]= "pageContent.qualityIntro1.lineStrokeColor"
+[bannerBG] = "pageContent.qualityIntro1.bannerBG">
+</app-banner-content-list>
+<app-banner-content-list [attr.id]="pageContent.qualityIntro2.id"
+[sectionTitle] = "pageContent.qualityIntro2.sectionTitle" 
+[subTitle] = "pageContent.qualityIntro2.subTitle" 
+[content] = "pageContent.qualityIntro2.content"
+[bgStylePatten] = "pageContent.qualityIntro2.bgStylePatten"
+[imageUrl] = "pageContent.qualityIntro2.imageUrl"
+[imagePostion] = "pageContent.qualityIntro2.imagePostion"
+[bgColor] = "pageContent.qualityIntro2.bgColor"
+[textColor] = "pageContent.qualityIntro2.textColor"
+[gridStrokeColor]= "pageContent.qualityIntro2.gridStrokeColor"
+[lineStrokeColor]= "pageContent.qualityIntro2.lineStrokeColor"
+[bannerBG] = "pageContent.qualityIntro2.bannerBG">
+</app-banner-content-list>
+<app-fixed-content [attr.id]="pageContent.qualityIntro3.id"
+[bgStylePatten] = "pageContent.qualityIntro3.bgStylePatten"
+[content] = "pageContent.qualityIntro3.content"
+[sectionTitle]= "pageContent.qualityIntro3.sectionTitle"
+[subtitle]= "pageContent.qualityIntro3.subtitle"
+[imageUrl] = "pageContent.qualityIntro3.imageUrl"
+[imagePostion] = "pageContent.qualityIntro3.imagePostion"
+[bgColor] = "pageContent.qualityIntro3.bgColor"
+[textColor] = "pageContent.qualityIntro3.textColor">
+</app-fixed-content>
+<app-testimonials [attr.id]="pageContent.qualityIntro4.id"
+ [bgStylePatten] = "pageContent.qualityIntro4.bgStylePatten"
+[content] = "pageContent.qualityIntro4.content"
+[sectionTitle]= "pageContent.qualityIntro4.sectionTitle"
+[subtitle]= "pageContent.qualityIntro4.subtitle"
+[bgColor] = "pageContent.qualityIntro4.bgColor"
+[textColor] = "pageContent.qualityIntro4.textColor"
+[gridStrokeColor] = "pageContent.qualityIntro4.gridStrokeColor"
+[lineStrokeColor] = "pageContent.qualityIntro4.lineStrokeColor">
+    
+</app-testimonials>

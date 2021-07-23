@@ -1,0 +1,37 @@
+<div class="{{bgColor}} {{textColor}} {{bgStylePatten}}">
+  <div class="px-3">
+      <div class="theme-container">
+        <div fxLayout="row wrap" fxLayoutAlign="center center" class="fixed-section-title py-2">
+          <h1 class="rayon-bold" >{{sectionTitle}}</h1>
+        </div>
+        
+          <div class="testimonials-carousel"> 
+              <div class="swiper-container h-100" [swiper]="config"> 
+                  <div class="swiper-wrapper h-100">      
+                      <div *ngFor="let testimonial of testimonials" class="swiper-slide">
+                          <div class="content text-center">
+                              <img [attr.data-src]="testimonial.image" class="swiper-lazy">
+                              <div class="quote open text-left primary-color">“</div>
+                              <p class="text font_16">{{testimonial.text}}</p>
+                              <div class="quote close text-right primary-color">”</div> 
+                              <h3 class="author rayon-bold">{{testimonial.author}}</h3>
+                              <p class="font_16">{{testimonial.position}}</p> 
+                              <div class="swiper-lazy-preloader"></div>
+                          </div>
+                      </div>
+                  </div> 
+                  <div class="swiper-pagination"></div> 
+              </div>
+          </div>
+              
+      </div>
+  </div>   
+  <app-svg-line-style 
+  [lineStrokeColor] = "lineStrokeColor"
+  [pathPosition] = "'both'"></app-svg-line-style> 
+  <app-svg-grid-style 
+  [gridStrokeColor] = "gridStrokeColor"
+  [pathPosition] = "'both'"
+  ></app-svg-grid-style>
+</div>
+

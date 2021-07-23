@@ -1,0 +1,42 @@
+@import '../../../styles/skins/generalColors';
+.fixed-section-title {
+    h1{
+        position: relative;
+        display: inline-block;
+    }
+    h1:before{
+        position: absolute;
+        height: 5px;
+        width: 30%;
+        left: 0;
+        bottom: 0;
+        background: $rayon-color-primary;
+        display: block;
+        content: "";
+    }
+    }
+    ::ng-deep .mat-card-border{
+        .mat-card{
+            border-top: 5px solid  $rayon-color-primary;
+            border-radius: 0px;
+            height: 450px !important;
+        }
+        @media only screen and (max-width: 742px) {
+            .mat-card{
+                height: 100% !important;
+            }
+        }
+        
+        .static-card-image {
+            padding: 0 1.25em;
+            position: relative;
+            z-index: 2;
+            margin-bottom: -3.87em;
+            img {
+                height: 200px !important;
+                width: 350px !important;
+            }
+        }
+    }
+
+    

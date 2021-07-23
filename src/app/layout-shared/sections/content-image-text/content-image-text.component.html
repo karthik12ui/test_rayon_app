@@ -1,0 +1,55 @@
+<div class="{{bgColor}} {{textColor}} {{bgStylePatten}}"> 
+  <div class="px-3">
+      <div class="theme-container">
+        <div fxLayout="row wrap" class="content-section-title py-2">
+          <span fxFlex="100">
+            <h1  class="rayon-bold">{{sectionTitle}}</h1>  
+          </span>
+            <p fxFlex="100" class="font_16 pt-1">{{subtitle}}</p>  
+        </div>   
+        <div fxLayout="row wrap" class="pt-2">
+          <div *ngIf="imagePostion == 'left'" fxFlex="100" fxFlex.gt-md="40" class="image-with-card">                    
+            <ng-container  *ngTemplateOutlet= "imageContentSection"></ng-container>
+        </div>   
+          <div fxFlex="100" fxFlex.gt-md="60" class="px-3">     
+             <div fxLayout="row wrap">
+                  <ul class="px-3"  *ngFor="let item of content">
+                    <li class="list_square font_16"> {{item.text}}</li>
+                  </ul>
+             </div>     
+             <div fxLayout="row wrap"class="py-2" *ngFor="let item of content2">
+               <div fxFlex="15" fxLayout="column" fxLayoutAlign="center center">
+                <mat-icon class="mat-icon-xlg {{item.color}}">{{item.icon}}</mat-icon>
+               </div>
+               <div fxFlex="85" fxLayout="column">
+                <h2 class="rayon-bold my-2">{{item.title}}</h2>
+                <p class="font_16">{{item.text}}</p>
+               </div>
+          </div>                
+          </div> 
+          <div  *ngIf="imagePostion == 'right'" fxFlex="100" fxFlex.gt-md="40">                    
+            <ng-container  *ngTemplateOutlet= "imageContentSection"></ng-container>        
+          </div>     
+        </div>
+      </div>
+  </div>   
+</div>
+
+<ng-template #imageContentSection>
+  <img  [src]="imageContent.imageUrl" alt="rayon-do" class="mw-100 d-block">    
+  <mat-card fxLayout="column" class="w-100 {{bgColor}}">
+    <div class="static-card-image" fxLayout="row wrap" class="py-2">
+      <span fxFlex="100" >
+        <p class="my-3 img-title rayon-tx-bold">
+          {{imageContent.title}}
+        </p>  
+      </span>
+   
+      <span fxFlex="100">
+        <h1 class="rayon-bold">{{imageContent.subTitle}}</h1>
+      </span> 
+    
+      <p class="mt-3 font_16">{{imageContent.text}}</p>                    
+      </div>
+  </mat-card>  
+</ng-template>

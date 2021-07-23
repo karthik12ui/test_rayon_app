@@ -1,0 +1,59 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display" class="mt-3">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-content-image-text [attr.id]="pageContent.aiIntro1.id"
+[sectionTitle] = "pageContent.aiIntro1.sectionTitle" 
+[content] = "pageContent.aiIntro1.content"
+[content2] = "pageContent.aiIntro1.content2"
+[bgStylePatten] = "pageContent.aiIntro1.bgStylePatten"
+[imageContent] = "pageContent.aiIntro1.imageContent"
+[imagePostion] = "pageContent.aiIntro1.imagePostion"
+[bgColor] = "pageContent.aiIntro1.bgColor"
+[textColor] = "pageContent.aiIntro1.textColor">
+</app-content-image-text>
+ <app-left-content-image [attr.id]="pageContent.aiIntro2.id"
+ [sectionTitle] = "pageContent.aiIntro2.sectionTitle" 
+ [subtitle]= "pageContent.aiIntro2.subTitle"
+ [content] = "pageContent.aiIntro2.content"
+ [bgStylePatten] = "pageContent.aiIntro2.bgStylePatten"
+ [imageUrl] = "pageContent.aiIntro2.imageUrl"
+ [imagePostion] = "pageContent.aiIntro2.imagePostion"
+ [bgColor] = "pageContent.aiIntro2.bgColor"
+ [textColor] = "pageContent.aiIntro2.textColor">
+</app-left-content-image>
+ <app-icon-text
+ [attr.id]="pageContent.aiIntro3.id"
+[bgStylePatten] = "pageContent.aiIntro3.bgStylePatten"
+[content] = "pageContent.aiIntro3.content"
+[sectionTitle]= "pageContent.aiIntro3.sectionTitle"
+[subtitle]= "pageContent.aiIntro3.subtitle"
+[bgColor] = "pageContent.aiIntro3.bgColor"
+[textColor] = "pageContent.aiIntro3.textColor">
+</app-icon-text>
+<app-image-with-list [attr.id]="pageContent.aiIntro4.id"
+[bgStylePatten] = "pageContent.aiIntro4.bgStylePatten"
+[content] = "pageContent.aiIntro4.content"
+[sectionTitle]= "pageContent.aiIntro4.sectionTitle"
+[subtitle]= "pageContent.aiIntro4.subtitle"
+[bgColor] = "pageContent.aiIntro4.bgColor"
+[textColor] = "pageContent.aiIntro4.textColor">
+</app-image-with-list>

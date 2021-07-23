@@ -1,0 +1,23 @@
+<div fxLayout="row wrap" class="theme-container px-2" ngClass.gt-xs="px-1">
+  <div fxFlex="100" fxFlex.gt-sm="25" class="custom-mat-fields" *ngIf="pageId">
+    <form [formGroup]="selectedOptionsForm" *ngIf="display">
+      <mat-form-field class="mx-2 mt-_1" appearance= "outline">
+        <mat-label>{{selectplaceholder}}</mat-label>
+        <mat-select matNativeControl
+        [formControlName]="options"
+          (selectionChange)="selectionOfDropdown()"
+          [(ngModel)]="selectedOption">
+          <mat-option *ngFor="let items of childMenu"  [value] ="items.id" >{{items.title}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+    </div>
+  <div fxFlex="100" fxFlex.gt-sm="75">
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link *ngFor="let item of pageNavItems"
+      (click) ="scrollTo(item.scrollTo)">
+      {{item.title}}
+      </a>
+    </nav>
+    </div>
+</div>

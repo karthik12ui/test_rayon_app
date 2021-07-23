@@ -1,0 +1,58 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<div class="p-1 theme-container">
+    <mat-card>
+        <div class="content-section-title mb-2">
+            <h1 class="rayon-bold">Search Jobs</h1>
+        </div>
+        <!-- <div class="title-divider-dark"></div> -->
+        <span *ngIf="searchDisplayFlag.searchResultsPlaceholder">
+            <app-lazy-loader
+            [loaderType] = LazyLoaderConst.LineList
+            [loaderLength] = LazyLoaderConst.LengthSize1
+            [loaderFormat] = LazyLoaderConst.FromatVert>
+            </app-lazy-loader>
+        </span>
+        <span *ngIf="!searchDisplayFlag.searchResultsPlaceholder">
+            <app-search-jobs [searchType]= "searchTypeSelected.searchType"
+            (onChangeSearch)= "searchEmitted($event)"
+            ></app-search-jobs>
+        </span>
+    </mat-card>
+    <div class="mt-2">
+        <span *ngIf="searchDisplayFlag.searchResultsPlaceholder">
+            <app-lazy-loader
+            [loaderType] = LazyLoaderConst.ImageList 
+            [loaderLength] = LazyLoaderConst.LengthSize4
+            [loaderFormat] = LazyLoaderConst.FormatHroz>
+            </app-lazy-loader>
+        </span>
+        <span *ngIf="!searchDisplayFlag.searchResultsPlaceholder">
+            <app-filter-jobs [dataList] = "filtersList"
+            [totalResults] = "listWithCountyType.length"
+            (onChangeFilter)="changeFilter($event)"></app-filter-jobs>
+            
+                <div class="pt-2" *ngFor="let item of listWithCountyType | filter: searchTypeSelected.searchInput">
+                    <app-jobs-list [dataList] = "item"></app-jobs-list>
+                </div>
+               
+        </span>
+    </div>
+</div>
+<app-icon-text
+[bgStylePatten] = "pageContent.lifeAtRayon.bgStylePatten"
+[content] = "pageContent.lifeAtRayon.content"
+[sectionTitle]= "pageContent.lifeAtRayon.sectionTitle"
+[subtitle]= "pageContent.lifeAtRayon.subtitle"
+[bgColor] = "pageContent.lifeAtRayon.bgColor"
+[textColor] = "pageContent.lifeAtRayon.textColor">
+</app-icon-text>

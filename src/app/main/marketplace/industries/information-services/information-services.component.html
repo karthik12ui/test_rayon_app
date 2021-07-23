@@ -1,0 +1,52 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+
+ <app-number-text [attr.id]="pageContent.infoServiceIntro1.id"
+ [bgStylePatten] = "pageContent.infoServiceIntro1.bgStylePatten"
+ [content] = "pageContent.infoServiceIntro1.content"
+ [sectionTitle]= "pageContent.infoServiceIntro1.sectionTitle"
+ [bgColor] = "pageContent.infoServiceIntro1.bgColor"
+ [textColor] = "pageContent.infoServiceIntro1.textColor">
+ 
+ </app-number-text>
+ <app-banner-content-list [attr.id]="pageContent.infoServiceIntro2.id"
+ [sectionTitle] = "pageContent.infoServiceIntro2.sectionTitle" 
+ [subTitle] = "pageContent.infoServiceIntro2.subTitle" 
+ [content] = "pageContent.infoServiceIntro2.content"
+ [bgStylePatten] = "pageContent.infoServiceIntro2.bgStylePatten"
+ [imageUrl] = "pageContent.infoServiceIntro2.imageUrl"
+ [imagePostion] = "pageContent.infoServiceIntro2.imagePostion" 
+ [bgColor] = "pageContent.infoServiceIntro2.bgColor"
+ [textColor] = "pageContent.infoServiceIntro2.textColor"
+ [gridStrokeColor]= "pageContent.infoServiceIntro2.gridStrokeColor"
+ [lineStrokeColor]= "pageContent.infoServiceIntro2.lineStrokeColor"
+ [bannerBG] = "pageContent.infoServiceIntro2.bannerBG">
+ </app-banner-content-list>
+ <app-list-image-content [attr.id]="pageContent.infoServiceIntro3.id"
+[sectionTitle] = "pageContent.infoServiceIntro3.sectionTitle" 
+[subtitle]= "pageContent.infoServiceIntro3.subTitle"
+[content] = "pageContent.infoServiceIntro3.content"
+[bgStylePatten] = "pageContent.infoServiceIntro3.bgStylePatten"
+[bgColor] = "pageContent.infoServiceIntro3.bgColor"
+[textColor] = "pageContent.infoServiceIntro3.textColor">
+</app-list-image-content>

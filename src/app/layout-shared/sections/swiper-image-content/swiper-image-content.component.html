@@ -1,0 +1,33 @@
+<div class="section {{bgStylePatten}}">
+  <div class="px-3">
+      <div class="theme-container">
+        <div fxLayout="row wrap" class="fixed-section-title py-2">
+            <h1 class="rayon-bold">{{sectionTitle}}</h1>  
+        </div>
+        <div class="swiper-container h-100 carousel-outer" [swiper]="config"> 
+          <div class="swiper-wrapper h-100">      
+              <div *ngFor="let service of contentList" class="swiper-slide">
+                  <mat-card class="swiper-image">
+                      <img mat-card-image [attr.data-src]="service.imageUrl" alt="" class="swiper-lazy d-block">
+                      <div class="swiper-lazy-preloader"></div>
+                      <mat-card-content>
+                          <p class="my-3 img-title rayon-tx-bold">
+                            {{service.title}}
+                          </p>   
+                          <h1 class="rayon-bold">{{service.subTitle}}</h1>
+
+                          <mat-divider></mat-divider>
+
+                          <p class="mt-3">{{service.text}}</p>                                    
+                      </mat-card-content>              
+                  </mat-card>
+                  
+              </div>
+          </div>                      
+          <button mat-mini-fab color="primary" class="swiper-button-prev swipe-arrow"><mat-icon>keyboard_arrow_left</mat-icon></button>
+          <button mat-mini-fab color="primary" class="swiper-button-next swipe-arrow"><mat-icon>keyboard_arrow_right</mat-icon></button> 
+      </div>
+              
+      </div>
+  </div>   
+</div>

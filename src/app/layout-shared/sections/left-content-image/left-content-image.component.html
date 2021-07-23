@@ -1,0 +1,48 @@
+<div class="section {{bgStylePatten}}">
+  <div class="px-3">
+      <div class="theme-container">
+        <div fxLayout="row wrap">
+          <div *ngIf="imagePostion == 'left'" fxFlex="100" fxFlex.gt-md="40" fxShow="false" fxShow.gt-md>                    
+            <img  [src]="imageUrl" alt="rayon-do" class="mw-100 d-block">                
+        </div>   
+          <div fxFlex="100" fxFlex.gt-md="60" class="py-3">     
+            <div fxLayout="row wrap" class="content-section-title py-2">
+              <h1 class="rayon-bold">{{sectionTitle}}</h1>  
+            </div>   
+            <div fxLayout="row wrap">
+              <p fxFlex="100" class="font_16 pt-1">{{subtitle}}</p>   
+            </div> 
+          
+             <div fxLayout="row wrap">
+              <div fxFlex="100">
+                <ul class="px-3"  *ngFor="let item of content">
+                  <li class="list_square font_16"> {{item.text}}</li>
+                </ul>
+              </div>
+             </div>                     
+          </div> 
+          <div  *ngIf="imagePostion == 'right'" fxFlex="100" fxFlex.gt-md="40" fxShow="false" fxShow.gt-md>                    
+              <img [src]="imageUrl" alt="rayon-do"  class="mw-100 d-block">                
+          </div>     
+        </div>
+      </div>
+  </div>   
+  <span *ngIf="imagePostion == 'right'" fxHide fxShow.gt-sm>
+    <app-svg-line-style 
+    [lineStrokeColor] ="'#00e1ff'"
+    [pathPosition] = "'left'"></app-svg-line-style> 
+    <app-svg-grid-style 
+    [gridStrokeColor] = "gridStrokeColor"
+    [pathPosition] = "'left'"
+    ></app-svg-grid-style>
+  </span>
+  <span *ngIf="imagePostion == 'left'" fxHide fxShow.gt-sm>
+    <app-svg-line-style 
+    [lineStrokeColor] = "'#00e1ff'"
+    [pathPosition] = "'right'"></app-svg-line-style> 
+    <app-svg-grid-style 
+    [gridStrokeColor] = "gridStrokeColor"
+    [pathPosition] = "'right'"
+    ></app-svg-grid-style>
+  </span>
+</div>

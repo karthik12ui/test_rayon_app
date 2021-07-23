@@ -1,0 +1,67 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-between stretch">
+  <form [formGroup]= "searchInputForm" class="py-1" ngClass.xs="p-1" fxFlex="100" fxFlex.gt-sm="70">     
+      <div fxLayout="row wrap" class="mt-2 mw-100">
+          <div fxFlex="100" fxFlex.gt-sm="40" class="px-1">
+              <mat-form-field class="w-100" appearance="outline"
+              [ngClass]="{ 'error-input': ((searchInputForm.get('searchType').invalid) &&
+               ((searchInputForm.get('searchType').dirty) || (searchInputForm.get('searchType').touched))) }">
+              <mat-label>Select</mat-label>
+              <mat-select matNativeControl
+              formControlName="searchType"
+              (selectionChange)="selectionUpdated()"
+              [(ngModel)]="searchDetails.searchType"
+              >
+              <mat-option>Please select</mat-option>
+              <mat-option *ngFor="let list of searchList" [value]="list.type">{{list.displayText}}</mat-option>
+              </mat-select>
+              <span
+                           mat-button matSuffix
+                          [matTooltip]="'select type of search'"
+                          mat-icon-button>
+                          <mat-icon>help</mat-icon>
+                  </span>
+          </mat-form-field>
+          <ng-container *ngFor="let validation of searchInputValidationMessages.searchType">
+                  <p class="help-block" *ngIf="searchInputForm.get('searchType').hasError(validation.type)  && ((searchInputForm.get('searchType').dirty || searchInputForm.get('searchType').touched))">
+                    {{ validation.message }}
+                  </p>
+          </ng-container>
+          </div>      
+          <div fxFlex="100" fxFlex.gt-sm="60" class="px-1" 
+          *ngIf="!!searchDetailsSelected.inputLabel && searchDetailsSelected.inputLabel !== null && searchDetailsSelected.inputLabel !== ''">
+              <mat-form-field appearance="outline" class="w-100"
+              [ngClass]="{ 'error-input': ((searchInputForm.get('searchInput').invalid) && ((searchInputForm.get('searchInput').dirty) || (searchInputForm.get('searchInput').touched))) }">
+                      <mat-label>{{searchDetailsSelected.inputLabel}}</mat-label>
+                          <input matInput 
+                          (keypress)="$event.keyCode != 32 ? $event:$event.preventDefault()"
+                          autocomplete="off"
+                          [(ngModel)]="searchDetails.searchInput"
+                          formControlName="searchInput"
+                          [placeholder]="searchDetailsSelected.inputPlaceholder">
+                  <span
+                      mat-button matSuffix
+                      [matTooltip]="searchDetailsSelected.inputPlaceholder"
+                      mat-icon-button>
+                      <mat-icon>help</mat-icon>
+                  </span>
+              </mat-form-field>
+              <ng-container *ngFor="let validation of searchInputValidationMessages.searchInput">
+                      <p class="help-block" *ngIf="searchInputForm.get('searchInput').hasError(validation.type)  && ((searchInputForm.get('searchInput').dirty || searchInputForm.get('searchInput').touched))">
+                        {{ validation.message }}
+                      </p>
+              </ng-container>
+          </div>
+      </div>
+  </form>
+  <div fxFlex="100" fxFlex.gt-sm="10">
+  </div>
+   <div fxFlex="100" fxFlex.gt-sm="20"  ngClass.xs="p-1">
+    <div fxLayout="row" fxLayoutAlign="start center" class="p-3">
+          <a mat-raised-button class="btn-border-primary" *ngIf="searchDetails.searchInput !== '' || searchDetails.emittedCount == 0"
+          [ngClass]="{'disableStyle': !searchInputForm.valid}"
+          [disabled]= "!searchInputForm.valid"
+          (click)="validateSearchFormFields()">Search</a>
+          <a mat-raised-button class="btn-border-primary" *ngIf="searchDetails.searchInput === '' && searchDetails.emittedCount > 0"
+          (click)="searchForDetails()">Reset</a>
+   </div>
+</div>

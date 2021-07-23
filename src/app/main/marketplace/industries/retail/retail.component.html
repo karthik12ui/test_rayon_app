@@ -1,0 +1,54 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display" class="mt-2">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-content-image-text [attr.id]="pageContent.retailIntro1.id"
+ [sectionTitle] = "pageContent.retailIntro1.sectionTitle" 
+ [content] = "pageContent.retailIntro1.content"
+ [content2] = "pageContent.retailIntro1.content2"
+ [bgStylePatten] = "pageContent.retailIntro1.bgStylePatten"
+ [imageContent] = "pageContent.retailIntro1.imageContent"
+ [imagePostion] = "pageContent.retailIntro1.imagePostion"
+ [bgColor] = "pageContent.retailIntro1.bgColor"
+ [textColor] = "pageContent.retailIntro1.textColor">
+ </app-content-image-text>
+ <app-icon-text
+ [attr.id]="pageContent.retailIntro3.id"
+ [bgStylePatten] = "pageContent.retailIntro3.bgStylePatten"
+ [content] = "pageContent.retailIntro3.content"
+ [sectionTitle]= "pageContent.retailIntro3.sectionTitle"
+ [subtitle]= "pageContent.retailIntro3.subtitle"
+ [bgColor] = "pageContent.retailIntro3.bgColor"
+ [textColor] = "pageContent.retailIntro3.textColor">
+ </app-icon-text>
+ <app-banner-content-list [attr.id]="pageContent.retailIntro2.id"
+[sectionTitle] = "pageContent.retailIntro2.sectionTitle" 
+[subTitle] = "pageContent.retailIntro2.subTitle" 
+[content] = "pageContent.retailIntro2.content"
+[bgStylePatten] = "pageContent.retailIntro2.bgStylePatten"
+[imageUrl] = "pageContent.retailIntro2.imageUrl"
+[imagePostion] = "pageContent.retailIntro2.imagePostion"
+[bgColor] = "pageContent.retailIntro2.bgColor"
+[textColor] = "pageContent.retailIntro2.textColor"
+[gridStrokeColor]= "pageContent.retailIntro2.gridStrokeColor"
+[lineStrokeColor]= "pageContent.retailIntro2.lineStrokeColor"
+[bannerBG] = "pageContent.retailIntro2.bannerBG">
+</app-banner-content-list>

@@ -1,0 +1,30 @@
+<div class="section {{bgStylePatten}}">
+  <div class="px-3">
+      <div class="theme-container">
+        <div fxLayout="row wrap" class="fixed-section-title py-2">
+          <span fxFlex="100">
+            <h1  class="rayon-bold">{{sectionTitle}}</h1>  
+          </span>
+            <p fxFlex="100" class="font_16 pt-1">{{subtitle}}</p>  
+        </div>
+          <mat-card class="p-0 {{textColor}} {{bgColor}}" fxLayout="row wrap"> 
+            <div *ngIf="imagePostion == 'left'" fxFlex="100" fxFlex.gt-md="50" fxShow="false" fxShow.gt-md>                    
+                <img  [src]="imageUrl" alt="rayon-do" class="mw-100 d-block">                
+            </div>   
+              <div fxFlex="100" fxFlex.gt-md="50" class="p-3">            
+                 <div fxLayout="row wrap">
+                      <div fxFlex="100" fxFlex.gt-xs="50" class="p-2" *ngFor="let item of content">
+                          <mat-icon class="mat-icon-xlg {{item.color}}">{{item.icon}}</mat-icon>
+                          <h2 class="rayon-bold my-2">{{item.title}}</h2>
+                          <p>{{item.text}}</p>
+                      </div>
+                 </div>                     
+              </div> 
+              <div  *ngIf="imagePostion == 'right'" fxFlex="100" fxFlex.gt-md="50" fxShow="false" fxShow.gt-md>                    
+                  <img [src]="imageUrl" alt="rayon-do"  class="mw-100 d-block">                
+              </div>            
+          </mat-card>
+              
+      </div>
+  </div>   
+</div>

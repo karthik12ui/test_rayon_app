@@ -1,0 +1,17 @@
+@import '../../../styles/skins/generalColors';
+.fixed-section-title {
+h1{
+    position: relative;
+    display: inline-block;
+}
+h1:before{
+    position: absolute;
+    height: 5px;
+    width: 30%;
+    left: 0;
+    bottom: 0;
+    background: $rayon-color-primary;
+    display: block;
+    content: "";
+}
+}

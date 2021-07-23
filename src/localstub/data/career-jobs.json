@@ -1,0 +1,216 @@
+{
+    "serviceStatus": {
+        "statusCode": "0000",
+        "statusMesssage": "SUCCESS",
+        "sessionToken": ""
+    },
+    "errorInfo": [],
+    "data": {
+       "jobsList": [
+           {
+               "postionID": "US233333",
+               "image": "assets/images/marketplace/careers/career-3.PNG",
+               "postedOn": "2021-04-25T05:00:00.000+0000",
+               "title": "Google Cloud Data Engineer",
+                "category": "Software Engineering",
+                "jobType": "Full Time",
+                "state": "TX",
+                "city": "Dallas",
+                "country": "usa",
+                "jobDetails": {
+                    "description": "A leading partner to the world’s major cloud providers, including AWS, Azure, and Google. The formation of Accenture Cloud First, with a $3 billion investment over three years, demonstrates our commitment to deliver greater value to our clients when they need it most. Our Cloud First multi-service group of more than 70,000 cloud professionals delivers a full stack of integrated cloud capabilities across data, edge, integrated infrastructure and applications, deep ecosystem skills, culture of change along with a deep industry expertise to shape, move, build and operate our clients’ businesses in the cloud. To accelerate our customers transformation leveraging cloud, we combine world-class learning and talent development expertise; deep experience in cloud change management; and cloud-ready operating models with a commitment to responsible business by design — with security, data privacy, responsible use of artificial intelligence, sustainability and ethics",
+                    "basicQualification": [
+                        {
+                            "list": "Bachelor's degree or equivalent (minimum 12 years) work experience. If Associate Degree, must have an additional minimum 6 years work experience."
+                        },
+                        {
+                            "list": "Possess Google Professional Data Engineer Certification."
+                        },
+                        {
+                            "list": "Minimum 3 years direct experience in Enterprise Data Warehouse technologies"
+                        },
+                        {
+                            "list": "Minimum 3 years in a customer facing role working with enterprise clients"
+                        },
+                        {
+                            "list": "Hands on GCP Cloud data implementation projects experience (Dataflow, Cloud Composer, Big Query, Cloud Storage etc.)"
+                        },
+                        {
+                            "list": "Experience with developing software code in one or more languages such as Java, Python and SQL."
+                        },
+                        {
+                            "list": "Experience designing and deploying large scale distributed data processing systems with few technologies such as Oracle, MS SQL Server, MySQL, PostgreSQL, MongoDB, Cassandra, Redis, Hadoop, Spark, HBase, Netezza, Teradata, Tableau, Qlik or MicroStrategy."
+                        }
+                    ],
+                    "PreferredSkills": [
+                        {
+                            "list": "Data migration and data processing experience on the Google Cloud stack, specifically: BigQuery, Cloud DataFlow , Cloud DataProc, Cloud Storage, Cloud DataPrep,Cloud PubSub, Cloud Composer, Cloud BigTable, DEV Ops, Github"
+                        },
+                        {
+                            "list": "Previous Consulting or client service delivery experience on Google Cloud Platform (GCP)."
+                        },
+                        {
+                            "list": "Experience in and understanding of data and information management, especially in Big Data trends. "
+                        },
+                        {
+                            "list": "Familiarity with the Technology stack available in the industry for data cataloging, data ingestion, capture, processing and curation:  Kafka, StreamSets, Attunity, Collibra, Map Reduce, Hadoop, Spark, Flume, Hive, Impala, SparkSQL"
+                        }
+                    ]
+                }
+           },
+           {
+            "postionID": "IND11111",
+            "image": "assets/images/marketplace/careers/career-3.PNG",
+            "postedOn": "2021-04-25T05:00:00.000+0000",
+            "title": "Google Cloud Data Engineer",
+             "category": "Software Engineering",
+             "jobType": "Full Time",
+             "state": "TS",
+             "city": "Hyderabad",
+             "country": "india",
+             "jobDetails": {
+                 "description": "A leading partner to the world’s major cloud providers, including AWS, Azure, and Google. The formation of Accenture Cloud First, with a $3 billion investment over three years, demonstrates our commitment to deliver greater value to our clients when they need it most. Our Cloud First multi-service group of more than 70,000 cloud professionals delivers a full stack of integrated cloud capabilities across data, edge, integrated infrastructure and applications, deep ecosystem skills, culture of change along with a deep industry expertise to shape, move, build and operate our clients’ businesses in the cloud. To accelerate our customers transformation leveraging cloud, we combine world-class learning and talent development expertise; deep experience in cloud change management; and cloud-ready operating models with a commitment to responsible business by design — with security, data privacy, responsible use of artificial intelligence, sustainability and ethics",
+                 "basicQualification": [
+                     {
+                         "list": "Bachelor's degree or equivalent (minimum 12 years) work experience. If Associate Degree, must have an additional minimum 6 years work experience."
+                     },
+                     {
+                         "list": "Possess Google Professional Data Engineer Certification."
+                     },
+                     {
+                         "list": "Minimum 3 years direct experience in Enterprise Data Warehouse technologies"
+                     },
+                     {
+                         "list": "Minimum 3 years in a customer facing role working with enterprise clients"
+                     },
+                     {
+                         "list": "Hands on GCP Cloud data implementation projects experience (Dataflow, Cloud Composer, Big Query, Cloud Storage etc.)"
+                     },
+                     {
+                         "list": "Experience with developing software code in one or more languages such as Java, Python and SQL."
+                     },
+                     {
+                         "list": "Experience designing and deploying large scale distributed data processing systems with few technologies such as Oracle, MS SQL Server, MySQL, PostgreSQL, MongoDB, Cassandra, Redis, Hadoop, Spark, HBase, Netezza, Teradata, Tableau, Qlik or MicroStrategy."
+                     }
+                 ],
+                 "PreferredSkills": [
+                     {
+                         "list": "Data migration and data processing experience on the Google Cloud stack, specifically: BigQuery, Cloud DataFlow , Cloud DataProc, Cloud Storage, Cloud DataPrep,Cloud PubSub, Cloud Composer, Cloud BigTable, DEV Ops, Github"
+                     },
+                     {
+                         "list": "Previous Consulting or client service delivery experience on Google Cloud Platform (GCP)."
+                     },
+                     {
+                         "list": "Experience in and understanding of data and information management, especially in Big Data trends. "
+                     },
+                     {
+                         "list": "Familiarity with the Technology stack available in the industry for data cataloging, data ingestion, capture, processing and curation:  Kafka, StreamSets, Attunity, Collibra, Map Reduce, Hadoop, Spark, Flume, Hive, Impala, SparkSQL"
+                     }
+                 ]
+             }
+        },
+            {
+               "postionID": "US233355",
+               "image": "assets/images/marketplace/careers/career-5.PNG",
+               "postedOn": "2021-04-29T05:00:00.000+0000",
+               "title": "Solutions Architect",
+                "category": "Software Engineering",
+                "jobType": "Full Time",
+                "state": "NJ",
+                "city": "Edison",
+                "country": "usa",
+                "jobDetails": {
+                    "description": "Position based in Edison, NJ. Analyze, design, devlop, test & implement enterprise applications using Pega & OpenText process suite platforms. Provide integration solution, implement & architect & devlop solutions. Utilize Java, JDBC, MySQL, Postgres SQL, Apache Tomcat, WebSphere, Web Services, ANT, UML, Eclipse, SOAP, MongoDB to design, devlop & implement applic’ns. Gather buss. reqmnts. & translate technical specs. into product reqmnts. Perform Unit & Integration tests to ensure code quality. Devlop workflows for product updates using Pega or OpenText Process suite case management capabilities. Engage in complete SDLC, perform code review & ensure compliance. Utilize SQL Server, Oracle & MySQL to design & maintain databases. Req. Master’s Degree or Foreign Equvlnt. in Comp. Sci. or Engg. or Tech. w/2 yrs of exp. in job offered or reltd. field. Job req. travel &/or reloc. to various unanticipated client sites in the U.S.",
+                    "basicQualification": [
+                        {
+                            "list": "Bachelor's degree or equivalent (minimum 12 years) work experience. If Associate Degree, must have an additional minimum 6 years work experience."
+                        },
+                        {
+                            "list": "Possess Google Professional Data Engineer Certification."
+                        },
+                        {
+                            "list": "Minimum 3 years direct experience in Enterprise Data Warehouse technologies"
+                        },
+                        {
+                            "list": "Minimum 3 years in a customer facing role working with enterprise clients"
+                        },
+                        {
+                            "list": "Hands on GCP Cloud data implementation projects experience (Dataflow, Cloud Composer, Big Query, Cloud Storage etc.)"
+                        },
+                        {
+                            "list": "Experience with developing software code in one or more languages such as Java, Python and SQL."
+                        },
+                        {
+                            "list": "Experience designing and deploying large scale distributed data processing systems with few technologies such as Oracle, MS SQL Server, MySQL, PostgreSQL, MongoDB, Cassandra, Redis, Hadoop, Spark, HBase, Netezza, Teradata, Tableau, Qlik or MicroStrategy."
+                        }
+                    ],
+                    "PreferredSkills": [
+                        {
+                            "list": "Data migration and data processing experience on the Google Cloud stack, specifically: BigQuery, Cloud DataFlow , Cloud DataProc, Cloud Storage, Cloud DataPrep,Cloud PubSub, Cloud Composer, Cloud BigTable, DEV Ops, Github"
+                        },
+                        {
+                            "list": "Previous Consulting or client service delivery experience on Google Cloud Platform (GCP)."
+                        },
+                        {
+                            "list": "Experience in and understanding of data and information management, especially in Big Data trends. "
+                        },
+                        {
+                            "list": "Familiarity with the Technology stack available in the industry for data cataloging, data ingestion, capture, processing and curation:  Kafka, StreamSets, Attunity, Collibra, Map Reduce, Hadoop, Spark, Flume, Hive, Impala, SparkSQL"
+                        }
+                    ]
+                }
+           },
+           {
+            "postionID": "US233344",
+            "image": "assets/images/marketplace/careers/career-7.PNG",
+            "postedOn": "2021-04-29T05:00:00.000+0000",
+            "title": "Programmer Analyst",
+             "category": "Software Engineering",
+             "jobType": "Full Time",
+             "state": "OH",
+             "city": "Columbus",
+             "country": "usa",
+             "jobDetails": {
+                 "description": "Position based in Whitehouse Station, NJ and Edison, NJ. Analyze, design, develop, test & implement Client/Server and Web applications using Java Script, jQuery, AngularJs, Node.js, Bootstrap, HTML5, XML, JSON, CSS3, LESS, MVC Github, AJAX, SOAP and RESTFull API. Experience in C#, .Net Framework and Crownpeak CMS is a plus. Analyze user requirements and enhance existing systems. Perform unit testing, create test plans and write technical documentation. Engage in complete SDLC and write stored procedures, packages and triggers using SQL Server. Require Master’s Degree or Foreign Equivalent in Computer Science or Engineering or Information Systems with two years of experience or Bachelor’s Degree or Foreign Equivalent in Computer Science or Engineering or Information Systems with three years of experience. Job requires travel and/or relocation to various unanticipated client sites in the United States.",
+                 "basicQualification": [
+                     {
+                         "list": "Bachelor's degree or equivalent (minimum 12 years) work experience. If Associate Degree, must have an additional minimum 6 years work experience."
+                     },
+                     {
+                         "list": "Possess Google Professional Data Engineer Certification."
+                     },
+                     {
+                         "list": "Minimum 3 years direct experience in Enterprise Data Warehouse technologies"
+                     },
+                     {
+                         "list": "Minimum 3 years in a customer facing role working with enterprise clients"
+                     },
+                     {
+                         "list": "Hands on GCP Cloud data implementation projects experience (Dataflow, Cloud Composer, Big Query, Cloud Storage etc.)"
+                     },
+                     {
+                         "list": "Experience with developing software code in one or more languages such as Java, Python and SQL."
+                     },
+                     {
+                         "list": "Experience designing and deploying large scale distributed data processing systems with few technologies such as Oracle, MS SQL Server, MySQL, PostgreSQL, MongoDB, Cassandra, Redis, Hadoop, Spark, HBase, Netezza, Teradata, Tableau, Qlik or MicroStrategy."
+                     }
+                 ],
+                 "PreferredSkills": [
+                     {
+                         "list": "Analyze user requirements and enhance existing systems. Perform unit testing, create test plans and write technical documentation."
+                     },
+                     {
+                         "list": "Previous Consulting or client service delivery experience on Google Cloud Platform (GCP)."
+                     },
+                     {
+                         "list": "Engage in complete SDLC and write stored procedures, packages and triggers. Utilize SQL Server, Oracle and MS-Access to design and maintain databases."
+                     },
+                     {
+                         "list": "Familiarity with the Technology stack available in the industry for data cataloging, data ingestion, capture, processing and curation:  Kafka, StreamSets, Attunity, Collibra, Map Reduce, Hadoop, Spark, Flume, Hive, Impala, SparkSQL"
+                     }
+                 ]
+             }
+        }
+       ]
+    }
+}

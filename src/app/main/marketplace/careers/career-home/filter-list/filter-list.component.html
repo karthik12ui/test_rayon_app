@@ -1,0 +1,17 @@
+<a mat-button [matMenuTriggerFor]="sortMenu" #sortMenuTrigger="matMenuTrigger">
+  <span class="pr-1 font_16"> {{filterList.title}}</span><mat-icon class="mat-icon-sm caret">keyboard_arrow_down</mat-icon>
+ </a>
+ <mat-menu #sortMenu="matMenu" [overlapTrigger]="false" xPosition="before" class="app-dropdown">
+   <span  (mouseleave)="sortMenuTrigger.closeMenu()">
+     <span *ngFor="let item of filterList.list">
+       <button mat-menu-item>
+         <mat-checkbox  (click)="$event.stopPropagation()" 
+         (change)="updateFilterSelection(item.value, item.flag)"
+         color="primary"
+         [checked]=item.flag >
+            <p class="mb-0"> {{item.value}}</p> 
+          </mat-checkbox>
+       </button> 
+     </span>
+   </span>
+ </mat-menu>

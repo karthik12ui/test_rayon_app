@@ -1,0 +1,54 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display" class="mt-3">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-content-image-text [attr.id]="pageContent.securityIntro1.id"
+[sectionTitle] = "pageContent.securityIntro1.sectionTitle" 
+[content] = "pageContent.securityIntro1.content"
+[content2] = "pageContent.securityIntro1.content2"
+[bgStylePatten] = "pageContent.securityIntro1.bgStylePatten"
+[imageContent] = "pageContent.securityIntro1.imageContent"
+[imagePostion] = "pageContent.securityIntro1.imagePostion"
+[bgColor] = "pageContent.securityIntro1.bgColor"
+[textColor] = "pageContent.securityIntro1.textColor">
+</app-content-image-text>
+<app-banner-content-list [attr.id]="pageContent.securityIntro2.id"
+[sectionTitle] = "pageContent.securityIntro2.sectionTitle" 
+[subTitle] = "pageContent.securityIntro2.subTitle" 
+[content] = "pageContent.securityIntro2.content"
+[bgStylePatten] = "pageContent.securityIntro2.bgStylePatten"
+[imageUrl] = "pageContent.securityIntro2.imageUrl"
+[imagePostion] = "pageContent.securityIntro2.imagePostion"
+[bgColor] = "pageContent.securityIntro2.bgColor"
+[textColor] = "pageContent.securityIntro2.textColor"
+[gridStrokeColor]= "pageContent.securityIntro2.gridStrokeColor"
+[lineStrokeColor]= "pageContent.securityIntro2.lineStrokeColor"
+[bannerBG] = "pageContent.securityIntro2.bannerBG">
+
+</app-banner-content-list>
+<app-image-with-list [attr.id]="pageContent.securityIntro3.id"
+[bgStylePatten] = "pageContent.securityIntro3.bgStylePatten"
+[content] = "pageContent.securityIntro3.content"
+[sectionTitle]= "pageContent.securityIntro3.sectionTitle"
+[subtitle]= "pageContent.securityIntro3.subtitle"
+[bgColor] = "pageContent.securityIntro3.bgColor"
+[textColor] = "pageContent.securityIntro3.textColor">
+</app-image-with-list>

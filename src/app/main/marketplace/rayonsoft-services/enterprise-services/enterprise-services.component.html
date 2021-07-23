@@ -1,0 +1,49 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ 
+ <app-content-image-text [attr.id]="pageContent.enterpriseIntro1.id"
+ [sectionTitle] = "pageContent.enterpriseIntro1.sectionTitle" 
+ [content] = "pageContent.enterpriseIntro1.content"
+ [content2] = "pageContent.enterpriseIntro1.content2"
+ [bgStylePatten] = "pageContent.enterpriseIntro1.bgStylePatten"
+ [imageContent] = "pageContent.enterpriseIntro1.imageContent"
+ [imagePostion] = "pageContent.enterpriseIntro1.imagePostion"
+ [bgColor] = "pageContent.enterpriseIntro1.bgColor"
+ [textColor] = "pageContent.enterpriseIntro1.textColor">
+</app-content-image-text>
+<app-image-with-list [attr.id]="pageContent.enterpriseIntro2.id"
+[bgStylePatten] = "pageContent.enterpriseIntro2.bgStylePatten"
+[content] = "pageContent.enterpriseIntro2.content"
+[sectionTitle]= "pageContent.enterpriseIntro2.sectionTitle"
+[subtitle]= "pageContent.enterpriseIntro2.subtitle"
+[bgColor] = "pageContent.enterpriseIntro2.bgColor"
+[textColor] = "pageContent.enterpriseIntro2.textColor">
+</app-image-with-list>
+<app-icon-text
+[bgStylePatten] = "pageContent.enterpriseIntro3.bgStylePatten"
+[content] = "pageContent.enterpriseIntro3.content"
+[sectionTitle]= "pageContent.enterpriseIntro3.sectionTitle"
+[subtitle]= "pageContent.enterpriseIntro3.subtitle"
+[bgColor] = "pageContent.enterpriseIntro3.bgColor"
+[textColor] = "pageContent.enterpriseIntro3.textColor">
+</app-icon-text>

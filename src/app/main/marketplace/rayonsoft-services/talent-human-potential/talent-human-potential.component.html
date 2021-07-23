@@ -1,0 +1,63 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-fixed-content [attr.id]="pageContent.howWeWork.id"
+ [bgStylePatten] = "pageContent.howWeWork.bgStylePatten"
+ [content] = "pageContent.howWeWork.content"
+ [sectionTitle]= "pageContent.howWeWork.sectionTitle"
+ [subtitle]= "pageContent.howWeWork.subtitle"
+ [imageUrl] = "pageContent.howWeWork.imageUrl"
+ [imagePostion] = "pageContent.howWeWork.imagePostion"
+ [bgColor] = "pageContent.howWeWork.bgColor"
+ [textColor] = "pageContent.howWeWork.textColor">
+ </app-fixed-content>
+ <app-left-content-image [attr.id]="pageContent.challenge.id"
+ [sectionTitle] = "pageContent.challenge.sectionTitle" 
+ [subtitle]= "pageContent.challenge.subTitle"
+ [content] = "pageContent.challenge.content"
+ [bgStylePatten] = "pageContent.challenge.bgStylePatten"
+ [imageUrl] = "pageContent.challenge.imageUrl"
+ [imagePostion] = "pageContent.challenge.imagePostion"
+ [bgColor] = "pageContent.challenge.bgColor"
+ [textColor] = "pageContent.challenge.textColor">
+</app-left-content-image>
+
+ <app-content-image-text [attr.id]="pageContent.creatingHealthy.id"
+ [sectionTitle] = "pageContent.creatingHealthy.sectionTitle" 
+ [content] = "pageContent.creatingHealthy.content"
+ [content2] = "pageContent.creatingHealthy.content2"
+ [bgStylePatten] = "pageContent.creatingHealthy.bgStylePatten"
+ [imageContent] = "pageContent.creatingHealthy.imageContent"
+ [imagePostion] = "pageContent.creatingHealthy.imagePostion"
+ [bgColor] = "pageContent.creatingHealthy.bgColor"
+ [textColor] = "pageContent.creatingHealthy.textColor">
+</app-content-image-text>
+
+<app-card-text [attr.id]="pageContent.whatrayonsoftdid.id"
+[bgStylePatten] = "pageContent.whatrayonsoftdid.bgStylePatten"
+[content] = "pageContent.whatrayonsoftdid.content"
+[sectionTitle]= "pageContent.whatrayonsoftdid.sectionTitle"
+[bgColor] = "pageContent.whatrayonsoftdid.bgColor"
+[textColor] = "pageContent.whatrayonsoftdid.textColor">
+
+</app-card-text>
+

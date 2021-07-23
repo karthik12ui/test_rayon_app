@@ -1,0 +1,15 @@
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+        <h3 class="rayon-bold"  fxLayout="row">
+            {{data.title}}
+        </h3>
+      
+    </mat-panel-title>
+   
+  </mat-expansion-panel-header>
+  <ul  fxLayout="row" class="list_square pl-3" *ngFor="let item of data.content">
+    <li class="py-1 font_16">{{item.li}}</li>
+</ul>
+</mat-expansion-panel>

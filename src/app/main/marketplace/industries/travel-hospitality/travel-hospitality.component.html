@@ -1,0 +1,55 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<!--Page Content-->
+<div *ngIf="pageContent.pageNavItems.display" class="mt-2">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+ <app-content-image-text [attr.id]="pageContent.travelIntro3.id"
+ [sectionTitle] = "pageContent.travelIntro3.sectionTitle" 
+ [content] = "pageContent.travelIntro3.content"
+ [content2] = "pageContent.travelIntro3.content2"
+ [bgStylePatten] = "pageContent.travelIntro3.bgStylePatten"
+ [imageContent] = "pageContent.travelIntro3.imageContent"
+ [imagePostion] = "pageContent.travelIntro3.imagePostion"
+ [bgColor] = "pageContent.travelIntro3.bgColor"
+ [textColor] = "pageContent.travelIntro3.textColor">
+ </app-content-image-text>
+
+ <app-icon-text
+ [attr.id]="pageContent.travelIntro2.id"
+ [bgStylePatten] = "pageContent.travelIntro2.bgStylePatten"
+ [content] = "pageContent.travelIntro2.content"
+ [sectionTitle]= "pageContent.travelIntro2.sectionTitle"
+ [subtitle]= "pageContent.travelIntro2.subtitle"
+ [bgColor] = "pageContent.travelIntro2.bgColor"
+ [textColor] = "pageContent.travelIntro2.textColor">
+ </app-icon-text>
+ <app-banner-content-list [attr.id]="pageContent.travelIntro1.id"
+ [sectionTitle] = "pageContent.travelIntro1.sectionTitle" 
+ [subTitle] = "pageContent.travelIntro1.subTitle" 
+ [content] = "pageContent.travelIntro1.content"
+ [bgStylePatten] = "pageContent.travelIntro1.bgStylePatten"
+ [imageUrl] = "pageContent.travelIntro1.imageUrl"
+ [imagePostion] = "pageContent.travelIntro1.imagePostion"
+ [bgColor] = "pageContent.travelIntro1.bgColor"
+ [textColor] = "pageContent.travelIntro1.textColor"
+ [gridStrokeColor]= "pageContent.travelIntro1.gridStrokeColor"
+ [lineStrokeColor]= "pageContent.travelIntro1.lineStrokeColor"
+ [bannerBG] = "pageContent.travelIntro1.bannerBG">
+ </app-banner-content-list>

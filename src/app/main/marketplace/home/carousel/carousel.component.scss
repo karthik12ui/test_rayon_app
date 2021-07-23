@@ -1,0 +1,109 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/skins/generalColors";
+.header-carousel{ 
+    height: $header-carousel-height;
+    .slide-item{
+        height: 100%;
+        background-size: cover;
+        opacity: 0.4;
+        background-position: center;
+    }
+    .swiper-lazy-preloader{
+        top: 15%;
+    }
+    .slide-main-title{
+        position: absolute;
+        z-index: 3;
+        top: 3%;  
+        left:35%;  
+        .app-title {
+            font-size: 45px;
+        }
+        .app-sub-title {
+            font-size: 25px;
+        }
+    }
+   
+    .slide-info{
+        position: absolute;
+        max-width: 450px;           
+        top: 28%;    
+        left:15%;
+        z-index: 2;
+        overflow: hidden;
+        color: #fff;
+        transition: 0.4s;
+        opacity: 0.85;
+        &:before{        
+            content: '';        
+            position:absolute;
+            opacity: 0.3;
+            width: 100%;
+            height: 100%; 
+            background-image: url('../../../../../assets/images/pattern/p3.png');
+            background-repeat: repeat;
+        }   
+    }
+    &.offset-bottom{
+        height: $header-carousel-height + $main-content-header-offset-to-top;        
+        .slide-info{
+            padding-bottom: $main-content-header-offset-to-top;
+        }
+    }
+}
+// xs
+@media screen and (max-width: 599px) {
+    .header-carousel{ 
+        // height: 320px;
+        height: $header-carousel-height - 120px;
+        &.offset-bottom{
+            height: $header-carousel-height + $main-content-header-offset-to-top - 120px;
+        } 
+        .slide-main-title{
+            position: absolute;
+            z-index: 3;
+            top: 3%;  
+            left:12%;  
+            .app-title {
+                font-size: 25px;
+                font-family: $rayon_bold !important;
+            }
+            .app-sub-title {
+                font-size: 15px;
+                font-family: $rayon_bold !important;
+            }
+        }
+        .slide-info{ 
+            max-width: 599px;          
+            left:3%;
+        }
+    }
+}
+
+// sm
+@media screen and (min-width: 600px) and (max-width: 959px) {  
+    .header-carousel{ 
+        // height: 360px;
+        height: $header-carousel-height - 80px;
+        &.offset-bottom{
+            height: $header-carousel-height + $main-content-header-offset-to-top - 80px;
+        }        
+        .slide-main-title{
+            position: absolute;
+            z-index: 3;
+            top: 3%;  
+            left:20%;  
+            .app-title {
+                font-size: 30px;
+            }
+            .app-sub-title {
+                font-size: 15px;
+            }
+        }
+        .slide-info{ 
+            .slide-info{ 
+                left:10%;
+            }
+        }
+    }
+}

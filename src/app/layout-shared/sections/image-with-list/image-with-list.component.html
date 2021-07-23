@@ -1,0 +1,34 @@
+<div class="{{bgStylePatten}}">
+  <div class="px-3">
+      <div class="theme-container">
+        <div fxLayout="row wrap" class="fixed-section-title py-2">
+          <span fxFlex="100">
+            <h1  class="rayon-bold">{{sectionTitle}}</h1>  
+          </span>
+            <p fxFlex="100" class="font_16 pt-1">{{subtitle}}</p>  
+        </div>
+
+          <div fxLayout="row wrap" class="py-2">
+            <div fxFlex="100" fxFlex.gt-md="33.33" fxFlex.gt-sm="50" class="p-2 mat-card-border"  *ngFor="let item of content">
+              <div class="static-card-image"  fxLayoutAlign="center center">
+                <img [src]="item.imageUrl" class="mw-100 d-block"> 
+              </div>            
+              <mat-card fxLayout="column" class="w-100 {{bgColor}} {{item.borderColor}}">
+                <div class="static-card-image"  fxLayoutAlign="center center" fxLayout="row wrap" class="py-2">
+                  <h1 fxFlex="100" class="mt-5 px-2 rayon-bold">{{item.title}}</h1>
+                  <ul fxFlex="100" class="font_16 list_square pl-4">
+                    <li *ngFor="let ls of item.text">
+                     <p>{{ls.list}}</p>
+                    </li>
+                  </ul>           
+                  </div>
+               
+              </mat-card>
+          </div>
+           
+          </div>
+         
+              
+      </div>
+  </div>   
+</div>

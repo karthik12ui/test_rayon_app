@@ -1,0 +1,30 @@
+<div class="{{bgStylePatten}}  {{textColor}} {{bgColor}}" >
+  <div class="theme-container">
+    <div fxLayout="row wrap" *ngFor="let section of content" class="px-2">
+      <div fxLayout="row wrap" class="pt-2 fixed-section-title">
+        <span fxFlex="100">
+          <h1  class="rayon-bold">{{section.sectionTitle}}</h1>  
+        </span>
+          <p fxFlex="100" class="font_16 pt-1">{{section.subtitle}}</p>  
+      </div>
+      <div fxLayout="row wrap" class="mb-4" fxLayoutAlign="space-between center">
+        <div *ngFor="let item of section.content" fxFlex="100" fxFlex.gt-md="48">
+          <span class=" overlap-text">
+            <h1 class="rayon-bold">{{item.title}}</h1>
+          </span>
+          <mat-card 
+           class="{{item.borderColor}} {{bgColor}} overlap-card">
+            <mat-card-content class="{{textColor}}">
+                <p class="mt-3 font_16">{{item.text}}</p>                                    
+            </mat-card-content>              
+        </mat-card>
+  
+        </div>
+      
+      </div>
+    </div>
+   
+ 
+  </div>  
+
+</div>

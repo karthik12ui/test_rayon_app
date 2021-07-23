@@ -1,0 +1,35 @@
+<div class="header-carousel" [class.offset-bottom]="contentOffsetToTop">
+  <div *ngIf="slides.length > 1"  class="swiper-container h-100" [swiper]="config" (indexChange)="onIndexChange($event)">
+      <div class="swiper-wrapper h-100">      
+          <div *ngFor="let slide of slides;" class="swiper-slide">
+              <div [attr.data-background]="slide.image" class="slide-item swiper-lazy">
+                  <div class="swiper-lazy-preloader"></div>
+              </div>
+          </div>
+      </div>     
+      <button mat-mini-fab color="primary" class="swiper-button-prev swipe-arrow"><mat-icon>keyboard_arrow_left</mat-icon></button>
+      <button mat-mini-fab color="primary" class="swiper-button-next swipe-arrow"><mat-icon>keyboard_arrow_right</mat-icon></button>
+    <div class="slide-main-title {{currentSlide.mainTitle}}">
+          <div fxLayout="column" fxLayoutAlign="center center">
+          <h1 class="app-title rayon-bold">Rayonsoft Technologies</h1>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <h3 class="app-sub-title rayon-bold">Implementing right technology</h3>
+        </div>
+    </div> 
+      <div fxLayout="column" fxLayoutAlign="start center" class="slide-info">
+          <span class="p-4  {{currentSlide.bgColorCode}}">
+            <h1 class="slide-title rayon-bold">{{currentSlide.title}}</h1>
+            <p class="location" fxLayout="row" fxLayoutAlign="center center">
+                <span class="px-1">{{currentSlide.subTitle}}</span>
+            </p> 
+            <div fxLayout="row" fxLayoutAlign="start center" class="py-3">
+              <a mat-raised-button 
+             fxShow="false"
+               fxShow.gt-xs class="uppercase">Learn More</a>
+            </div> 
+          </span>
+        
+      </div> 
+  </div>
+</div>

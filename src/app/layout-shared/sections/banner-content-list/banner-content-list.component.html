@@ -1,0 +1,40 @@
+<div class="{{bgStylePatten}} {{bgColor}} {{textColor}} pt-5">
+  <div class="p-0 content-banner {{bannerBG.bgPatten}}  {{bannerBG.bgColor}} {{bannerBG.textColor}}"> 
+    <div fxLayout="row wrap" class="theme-container">
+          <div fxFlex="100" fxFlex.gt-md="40" fxFlex.gt-sm="40" class="p-1" 
+          fxShow="false" fxShow.gt-sm
+          *ngIf="imagePostion == 'left'" >
+        </div>
+        <div fxFlex="100" fxFlex.gt-md="60" fxFlex.gt-sm="60" class="p-1">
+            <div fxLayout="row">
+                <h1 class="py-1 rayon-bold" ngClass.gt-xs="py-3">{{sectionTitle}}</h1>
+              </div>
+              <p class="mb-1 px-1 font_16">{{subTitle}}</p>
+        </div>
+    </div>
+  </div>
+  <div>
+    <div fxLayout="row wrap" class="py-2 theme-container">
+      <div fxFlex="100" fxFlex.gt-md="60" fxFlex.gt-sm="60" class="p-2"  *ngIf="imagePostion == 'right'" >
+        <div class="static-card-image"  fxLayoutAlign="center center">
+          <img [src]="imageUrl" class="mw-100 d-block"> 
+        </div>   
+      </div>
+      <div fxFlex="100" fxFlex.gt-md="40" fxFlex.gt-sm="40" class="p-2 content-banner-card" >
+        <mat-card fxLayout="column" class="w-100" class="{{bannerBG.borderColor}} {{bgColor}}">
+          <div fxLayoutAlign="start center" fxLayout="row wrap" *ngFor="let item of content">
+            <h1 fxFlex="100" class="mt-1 rayon-bold">{{item.title}}</h1>
+            <p class="font_16">{{item.text}}</p>          
+            </div>
+        </mat-card>
+    </div>
+    <div fxFlex="100" fxFlex.gt-md="60" fxFlex.gt-sm="60" class="p-2"  *ngIf="imagePostion == 'left'" >
+      <div class="static-card-image"  fxLayoutAlign="center center">
+        <img [src]="imageUrl" class="mw-100 d-block"> 
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+</div>

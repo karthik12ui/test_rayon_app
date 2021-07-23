@@ -1,0 +1,59 @@
+<app-page-banner
+[mainTitle] = "pageContent.pageBanner.mainTitle"
+[title] = "pageContent.pageBanner.title"
+[subTitle] = "pageContent.pageBanner.subTitle"
+[image] = "pageContent.pageBanner.image" 
+[textColor] = "pageContent.pageBanner.textColor"
+[bgColor] = "pageContent.pageBanner.bgColor"
+[gridStrokeColor] = "pageContent.pageBanner.gridStrokeColor"
+[lineStrokeColor] = "pageContent.pageBanner.lineStrokeColor"
+[enableQuickNav] = "pageContent.pageBanner.enableQuickNav">
+</app-page-banner>
+<div *ngIf="pageContent.pageNavItems.display">
+
+    <app-marketplace-tabs
+          (scrollToEvent)= "scrollToView($event)"
+          [selectplaceholder] = "pageContent.pageNavItems.selectPlaceholder"
+          [pageParentId]="pageContent.pageBanner.pageParentId"
+          [pageId] = "pageContent.pageBanner.pageId"
+          [pageNavItems]= "pageContent.pageNavItems.list">
+    </app-marketplace-tabs>
+ </div>
+<app-content-image-text [attr.id]="pageContent.transform.id"
+[sectionTitle] = "pageContent.transform.sectionTitle" 
+[content] = "pageContent.transform.content"
+[content2] = "pageContent.transform.content2"
+[bgStylePatten] = "pageContent.transform.bgStylePatten"
+[imageContent] = "pageContent.transform.imageContent"
+[imagePostion] = "pageContent.transform.imagePostion"
+[bgColor] = "pageContent.transform.bgColor"
+[textColor] = "pageContent.transform.textColor">
+</app-content-image-text>
+<app-left-content-image [attr.id]="pageContent.customerExperience.id"
+[sectionTitle] = "pageContent.customerExperience.sectionTitle" 
+[subtitle]= "pageContent.customerExperience.subTitle"
+[content] = "pageContent.customerExperience.content"
+[bgStylePatten] = "pageContent.customerExperience.bgStylePatten"
+[imageUrl] = "pageContent.customerExperience.imageUrl"
+[imagePostion] = "pageContent.customerExperience.imagePostion"
+[bgColor] = "pageContent.customerExperience.bgColor"
+[textColor] = "pageContent.customerExperience.textColor">
+</app-left-content-image>
+<app-fixed-content [attr.id]="pageContent.implementSolution.id"
+[bgStylePatten] = "pageContent.implementSolution.bgStylePatten"
+[content] = "pageContent.implementSolution.content"
+[sectionTitle]= "pageContent.implementSolution.sectionTitle"
+[subtitle]= "pageContent.implementSolution.subtitle"
+[imageUrl] = "pageContent.implementSolution.imageUrl"
+[imagePostion] = "pageContent.implementSolution.imagePostion"
+[bgColor] = "pageContent.implementSolution.bgColor"
+[textColor] = "pageContent.implementSolution.textColor">
+</app-fixed-content>
+<app-icon-text
+[bgStylePatten] = "pageContent.glance.bgStylePatten"
+[content] = "pageContent.glance.content"
+[sectionTitle]= "pageContent.glance.sectionTitle"
+[subtitle]= "pageContent.glance.subtitle"
+[bgColor] = "pageContent.glance.bgColor"
+[textColor] = "pageContent.glance.textColor">
+</app-icon-text>
